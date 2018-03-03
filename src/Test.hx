@@ -14,7 +14,7 @@ class Test {
         while( i < 2*Math.PI + Math.PI/10 ){
             p = i;
             f = p;
-            trace( f.byDenominator( 7 ) + ' pi');
+            trace( f.byDenominator( 10 ) + ' pi');
             i+= Math.PI/10;
         }
         trace( 'from -pi to pi' );
@@ -34,6 +34,7 @@ class Test {
         trace( goldenRatio );
         trace( earthTropicalYear );
         p = '1/2';//pi
+        trace( p );
         f = p;
         trace( f + 'pi' );
         trace( p.degrees );

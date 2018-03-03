@@ -118,15 +118,15 @@ Test.main = function() {
 		var n2 = frac3.numerator;
 		var d2 = frac3.denominator;
 		var out1 = n2 == 0 ? "0" : n2 == d2 ? "1" : frac3.positive ? "" + n2 + "/" + d2 : "-" + n2 + "/" + d2;
-		if(!(frac3.denominator == 7 || out1 == "0" || out1 == "1")) {
-			var dom = Math.round(frac3.value * 7);
+		if(!(frac3.denominator == 10 || out1 == "0" || out1 == "1")) {
+			var dom = Math.round(frac3.value * 10);
 			var numerator = dom;
 			var positive = true;
 			var value = null;
 			var this2;
 			var numNeg = dom < 0;
 			if(value == null) {
-				value = dom / 7;
+				value = dom / 10;
 			}
 			if(numNeg) {
 				positive = false;
@@ -134,7 +134,7 @@ Test.main = function() {
 					numerator = -dom;
 				}
 			}
-			this2 = { numerator : numerator, denominator : 7, positive : positive, value : value};
+			this2 = { numerator : numerator, denominator : 10, positive : positive, value : value};
 			var frac4 = this2;
 			var n3 = frac4.numerator;
 			var d3 = frac4.denominator;
@@ -292,9 +292,9 @@ Test.main = function() {
 	console.log(n8 == 0 ? "0" : n8 == d8 ? "1" : earthTropicalYear.positive ? "" + n8 + "/" + d8 : "-" + n8 + "/" + d8);
 	var i1 = "1/2".indexOf("/");
 	var frac11;
-	if(i1 == -1) {
+	if(i1 != -1) {
 		var numerator1 = Std.parseInt(HxOverrides.substr("1/2",0,i1));
-		var denominator = Std.parseInt(HxOverrides.substr("1/2",i1,"1/2".length));
+		var denominator = Std.parseInt(HxOverrides.substr("1/2",i1 + 1,"1/2".length));
 		var positive1 = true;
 		var value1 = null;
 		var this3;
@@ -341,7 +341,11 @@ Test.main = function() {
 		frac11 = fracStore7;
 	}
 	var frac13 = frac11;
+	var n9 = frac13.numerator;
+	var d9 = frac13.denominator;
+	console.log(n9 == 0 ? "0" : n9 == d9 ? "1" : frac13.positive ? "" + n9 + "/" + d9 : "-" + n9 + "/" + d9);
 	p = (frac13.positive ? frac13.numerator / frac13.denominator : -frac13.numerator / frac13.denominator) * Math.PI;
+	console.log(p);
 	var f3 = p / Math.PI;
 	var arr8 = fracs_Fracs.approximateFractions(f3);
 	var dist8 = Infinity;
@@ -364,9 +368,9 @@ Test.main = function() {
 		}
 	}
 	var frac15 = fracStore8;
-	var n9 = frac15.numerator;
-	var d9 = frac15.denominator;
-	console.log((n9 == 0 ? "0" : n9 == d9 ? "1" : frac15.positive ? "" + n9 + "/" + d9 : "-" + n9 + "/" + d9) + "pi");
+	var n10 = frac15.numerator;
+	var d10 = frac15.denominator;
+	console.log((n10 == 0 ? "0" : n10 == d10 ? "1" : frac15.positive ? "" + n10 + "/" + d10 : "-" + n10 + "/" + d10) + "pi");
 	console.log(p * 180 / Math.PI);
 };
 var fracs__$Fraction_FractionArray_$Impl_$ = {};

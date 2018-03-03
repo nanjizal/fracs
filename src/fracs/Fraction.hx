@@ -70,8 +70,8 @@ abstract Fraction( Fractional ) to Fractional from Fractional {
     public static inline
     function fromString( val: String ): Fraction {
         var i = val.indexOf( '/' );
-        var frac: Fraction = if( i == -1 ){
-            new Fraction( Std.parseInt( val.substr( 0, i ) ), Std.parseInt( val.substr( i, val.length ) ) );
+        var frac: Fraction = if( i != -1 ){
+            new Fraction( Std.parseInt( val.substr( 0, i ) ), Std.parseInt( val.substr( i + 1, val.length ) ) );
         } else {
             Std.parseFloat( val );
         }
