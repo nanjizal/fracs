@@ -20,4 +20,4 @@ trace( third ); // 1/3
 ```
 
 ( The code to deal with input string number Exponent is ported, but has been left private, and is not connected or setup for use.
-but should be easy to implement from commited code. )
+Should be easy to implement from commited code. )
