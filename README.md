@@ -16,7 +16,7 @@ trace( p.degrees ); // 90
 
 ```haxe
 var third: Fraction = 0.333333333333333;
-trace( third );
+trace( third ); // 1/3
 ```
 
 The code to deal with string number Exponents is ported but left private and not connected or setup for use.
