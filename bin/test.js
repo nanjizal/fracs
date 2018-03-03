@@ -341,9 +341,6 @@ Test.main = function() {
 		frac11 = fracStore7;
 	}
 	var frac13 = frac11;
-	var n9 = frac13.numerator;
-	var d9 = frac13.denominator;
-	console.log(n9 == 0 ? "0" : n9 == d9 ? "1" : frac13.positive ? "" + n9 + "/" + d9 : "-" + n9 + "/" + d9);
 	p = (frac13.positive ? frac13.numerator / frac13.denominator : -frac13.numerator / frac13.denominator) * Math.PI;
 	console.log(p);
 	var f3 = p / Math.PI;
@@ -368,10 +365,34 @@ Test.main = function() {
 		}
 	}
 	var frac15 = fracStore8;
-	var n10 = frac15.numerator;
-	var d10 = frac15.denominator;
-	console.log((n10 == 0 ? "0" : n10 == d10 ? "1" : frac15.positive ? "" + n10 + "/" + d10 : "-" + n10 + "/" + d10) + "pi");
+	var n9 = frac15.numerator;
+	var d9 = frac15.denominator;
+	console.log((n9 == 0 ? "0" : n9 == d9 ? "1" : frac15.positive ? "" + n9 + "/" + d9 : "-" + n9 + "/" + d9) + "pi");
 	console.log(p * 180 / Math.PI);
+	var arr9 = fracs_Fracs.approximateFractions(0.333333333333333);
+	var dist9 = Infinity;
+	var dif9;
+	var l10 = arr9.length;
+	var fracFloat9;
+	var fracStore9 = arr9[0];
+	var _g110 = 0;
+	while(_g110 < l10) {
+		var frac16 = arr9[_g110++];
+		if(frac16.positive) {
+			fracFloat9 = frac16.numerator / frac16.denominator;
+		} else {
+			fracFloat9 = -frac16.numerator / frac16.denominator;
+		}
+		dif9 = Math.abs(fracFloat9 - 0.333333333333333);
+		if(dif9 < dist9) {
+			dist9 = dif9;
+			fracStore9 = frac16;
+		}
+	}
+	var third = fracStore9;
+	var n10 = third.numerator;
+	var d10 = third.denominator;
+	console.log(n10 == 0 ? "0" : n10 == d10 ? "1" : third.positive ? "" + n10 + "/" + d10 : "-" + n10 + "/" + d10);
 };
 var fracs__$Fraction_FractionArray_$Impl_$ = {};
 fracs__$Fraction_FractionArray_$Impl_$.add = function(this1,val) {

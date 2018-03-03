@@ -3,7 +3,7 @@ import fracs.Fraction;
 import fracs.Pi2pi;
 class Test {
     static function main(){
-        var frac: Fraction = 0.012;//new Fraction( -3, 4 );
+        var frac: Fraction = 0.012;
         trace( frac );
         var all = Fraction.all( -Math.PI );
         trace( ' all ' + all );
@@ -38,5 +38,7 @@ class Test {
         f = p;
         trace( f + 'pi' );
         trace( p.degrees );
+        var third: Fraction = 0.333333333333333;
+        trace( third );
     }
 }

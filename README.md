@@ -11,3 +11,8 @@ var f: Fraction = p;
 trace( f + ' pi' ); // 1/2 pi
 trace( p.degrees ); // 90
 ```
+
+```haxe
+var third: Fraction = 0.333333333333333;
+trace( third );
+```
