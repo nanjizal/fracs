@@ -19,5 +19,5 @@ var third: Fraction = 0.333333333333333;
 trace( third ); // 1/3
 ```
 
-The code to deal with string number Exponents is ported but left private and not connected or setup for use.
-but should be easy to implement from commited code.
+( The code to deal with input string number Exponent is ported, but has been left private, and is not connected or setup for use.
+but should be easy to implement from commited code. )
