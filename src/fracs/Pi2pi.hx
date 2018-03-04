@@ -37,7 +37,7 @@ abstract Pi2pi( Float ) to Float {
     @:op(A - B)
     public function subtractionPi( b: Pi2pi ): Pi2pi {
         var f: Float = this;
-        var f2: Float = this;
+        var f2: Float = b;
         f -= f2;
         var p: Pi2pi = f;
         return f;
