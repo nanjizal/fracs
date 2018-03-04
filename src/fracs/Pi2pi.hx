@@ -28,6 +28,11 @@ abstract Pi2pi( Float ) to Float {
         }
         return new Pi2pi( out );
     }
+    @:op(A > B) static function gt( a:Pi2pi, b:Pi2pi ) : Bool;
+    @:op(A < B) static function lt( a:Pi2pi, b:Pi2pi ) : Bool;
+    @:op(A == B) static function et( a:Pi2pi, b:Pi2pi ) : Bool;
+    @:op(A >= B) static function gte( a:Pi2pi, b:Pi2pi ) : Bool;
+    @:op(A <= B) static function lte( a:Pi2pi, b:Pi2pi ) : Bool;
     @:op(A + B)
     public function additionPi( b: Pi2pi ): Pi2pi {
         var f: Float = this + b;
