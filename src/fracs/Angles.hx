@@ -3,33 +3,75 @@ import fracs.Pi2pi;
 import fracs.ZeroTo2Pi;
 class Angles{
     public inline static function pi2pi( angle: Float ): Float {
-        var a = ( angle + Math.PI ) % ( 2 * Math.PI );
-        return ( a >= 0 )? a - Math.PI: a + Math.PI;
+        return if( angle <= Math.PI && angle > -Math.PI ){
+            angle; // don't really want any maths to touch it if it's within range as it may effect value slightly
+        } else {
+            var a = ( angle + Math.PI ) % ( 2 * Math.PI );
+            ( a >= 0 )? a - Math.PI: a + Math.PI;
+        }
     }
     public inline static function zeroto2pi( angle: Float ): Float {
-        var a = angle % ( 2 * Math.PI );
-        return ( a >= 0 )? a : ( a + 2 * Math.PI );
+        return if( angle >= 0 && angle > Math.PI ){
+            angle; // don't really want any maths to touch it if it's within range as it may effect value slightly
+        } else {
+            var a = angle % ( 2 * Math.PI );
+            ( a >= 0 )? a : ( a + 2 * Math.PI );
+        }
     }
     public inline static function zerotoMinus2pi( angle: Float ): Float {
-        var a = angle % ( 2 * Math.PI );
-        var a = ( a >= 0 )? a: ( a + 2 * Math.PI );
-        return -( Math.PI*2 - a );
+        return if( angle <= 0 && angle > -Math.PI ){
+            angle; // don't really want any maths to touch it if it's within range as it may effect value slightly
+        } else {
+            var a = angle % ( 2 * Math.PI );
+            var a = ( a >= 0 )? a: ( a + 2 * Math.PI );
+            -( Math.PI*2 - a );
+        }
     }    
     public inline static function difference( a: Float, b: Float ): Float {
         var za: ZeroTo2pi = a;
         var zb: ZeroTo2pi = b;
         var fa: Float = a;
         var fb: Float = b;
-        var alpha = Math.abs( a - b );
+        var theta = Math.abs( a - b );
         var clockwise = a < b;
-        return ( clockwise )? alpha: -alpha;
-    }
+        return ( clockwise )? theta: -theta;
+    }    
     public inline static function differenceClockWise( a: Float, b: Float ){
         var dif = difference( a, b );
-        return ( dif > 0 )? dif: 180 + dif; 
+        return ( dif > 0 )? dif: 2 * Math.PI + dif; 
     }
     public inline static function differenceAntiClockwise( a: Float, b: Float ){
         var dif = difference( a, b );
-        return ( dif < 0 )? -dif: 180 - dif; 
+        return ( dif < 0 )? -dif: 2 * Math.PI - dif; 
+    }
+    public inline static function differenceSmallest( a: Float, b: Float ){
+        var za: ZeroTo2pi = a;
+        var zb: ZeroTo2pi = b;
+        var fa: Float = a;
+        var fb: Float = b;
+        var theta = Math.abs( a - b );
+        var smallest = ( theta <= Math.PI ); // smallest or equal!
+        var clockwise = a < b;
+        var dif = ( clockwise )? theta: -theta;
+        return if( smallest ) {
+            dif;
+        } else {
+            ( clockwise )? -( 2 * Math.PI - theta ): 2 * Math.PI - theta;
+        }
+    }
+    public inline static function differenceLargest( a: Float, b: Float ){
+        var za: ZeroTo2pi = a;
+        var zb: ZeroTo2pi = b;
+        var fa: Float = a;
+        var fb: Float = b;
+        var theta = Math.abs( a - b );
+        var largest = ( theta > Math.PI );
+        var clockwise = a < b;
+        var dif = ( clockwise )? theta: -theta;
+        return if( largest ) {
+            dif;
+        } else {
+            ( clockwise )? -( 2 * Math.PI - theta ): 2 * Math.PI - theta;
+        }
     }
 }

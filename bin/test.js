@@ -72,10 +72,20 @@ Test.main = function() {
 	console.log("from 0 -> 2pi");
 	var i = 0.;
 	while(i < 2 * Math.PI + Math.PI / 10) {
-		var a = (i + Math.PI) % (2 * Math.PI);
-		p = a >= 0 ? a - Math.PI : a + Math.PI;
-		var f = p / Math.PI;
-		var arr1 = fracs_Fracs.approximateFractions(f);
+		var f;
+		if(i <= Math.PI && i > -Math.PI) {
+			f = i;
+		} else {
+			var a = (i + Math.PI) % (2 * Math.PI);
+			if(a >= 0) {
+				f = a - Math.PI;
+			} else {
+				f = a + Math.PI;
+			}
+		}
+		p = f;
+		var f1 = p / Math.PI;
+		var arr1 = fracs_Fracs.approximateFractions(f1);
 		var dist1 = Infinity;
 		var dif1;
 		var l2 = arr1.length;
@@ -89,7 +99,7 @@ Test.main = function() {
 			} else {
 				fracFloat1 = -frac2.numerator / frac2.denominator;
 			}
-			dif1 = Math.abs(fracFloat1 - f);
+			dif1 = Math.abs(fracFloat1 - f1);
 			if(dif1 < dist1) {
 				dist1 = dif1;
 				fracStore1 = frac2;
@@ -127,10 +137,20 @@ Test.main = function() {
 	console.log("from -pi to pi");
 	i = -Math.PI;
 	while(i < Math.PI + Math.PI / 10) {
-		var a1 = (i + Math.PI) % (2 * Math.PI);
-		p = a1 >= 0 ? a1 - Math.PI : a1 + Math.PI;
-		var f1 = p / Math.PI;
-		var arr2 = fracs_Fracs.approximateFractions(f1);
+		var f2;
+		if(i <= Math.PI && i > -Math.PI) {
+			f2 = i;
+		} else {
+			var a1 = (i + Math.PI) % (2 * Math.PI);
+			if(a1 >= 0) {
+				f2 = a1 - Math.PI;
+			} else {
+				f2 = a1 + Math.PI;
+			}
+		}
+		p = f2;
+		var f3 = p / Math.PI;
+		var arr2 = fracs_Fracs.approximateFractions(f3);
 		var dist2 = Infinity;
 		var dif2;
 		var l3 = arr2.length;
@@ -144,7 +164,7 @@ Test.main = function() {
 			} else {
 				fracFloat2 = -frac5.numerator / frac5.denominator;
 			}
-			dif2 = Math.abs(fracFloat2 - f1);
+			dif2 = Math.abs(fracFloat2 - f3);
 			if(dif2 < dist2) {
 				dist2 = dif2;
 				fracStore2 = frac5;
@@ -279,8 +299,8 @@ Test.main = function() {
 		this3 = { numerator : numerator1, denominator : denominator, positive : positive1, value : value1};
 		frac11 = this3;
 	} else {
-		var f2 = parseFloat("1/2");
-		var arr7 = fracs_Fracs.approximateFractions(f2);
+		var f4 = parseFloat("1/2");
+		var arr7 = fracs_Fracs.approximateFractions(f4);
 		var dist7 = Infinity;
 		var dif7;
 		var l8 = arr7.length;
@@ -294,7 +314,7 @@ Test.main = function() {
 			} else {
 				fracFloat7 = -frac12.numerator / frac12.denominator;
 			}
-			dif7 = Math.abs(fracFloat7 - f2);
+			dif7 = Math.abs(fracFloat7 - f4);
 			if(dif7 < dist7) {
 				dist7 = dif7;
 				fracStore7 = frac12;
@@ -305,8 +325,8 @@ Test.main = function() {
 	var frac13 = frac11;
 	p = (frac13.positive ? frac13.numerator / frac13.denominator : -frac13.numerator / frac13.denominator) * Math.PI;
 	console.log(p);
-	var f3 = p / Math.PI;
-	var arr8 = fracs_Fracs.approximateFractions(f3);
+	var f5 = p / Math.PI;
+	var arr8 = fracs_Fracs.approximateFractions(f5);
 	var dist8 = Infinity;
 	var dif8;
 	var l9 = arr8.length;
@@ -320,7 +340,7 @@ Test.main = function() {
 		} else {
 			fracFloat8 = -frac14.numerator / frac14.denominator;
 		}
-		dif8 = Math.abs(fracFloat8 - f3);
+		dif8 = Math.abs(fracFloat8 - f5);
 		if(dif8 < dist8) {
 			dist8 = dif8;
 			fracStore8 = frac14;
