@@ -44,7 +44,7 @@ class Angles{
         var dif = difference( a, b );
         return ( dif < 0 )? -dif: 2 * Math.PI - dif; 
     }
-    public inline static function differenceSmallest( a: Float, b: Float ){
+    public inline static function differenceSmall( a: Float, b: Float ){
         var za: ZeroTo2pi = a;
         var zb: ZeroTo2pi = b;
         var fa: Float = a;
@@ -59,7 +59,7 @@ class Angles{
             ( clockwise )? -( 2 * Math.PI - theta ): 2 * Math.PI - theta;
         }
     }
-    public inline static function differenceLargest( a: Float, b: Float ){
+    public inline static function differenceLarge( a: Float, b: Float ){
         var za: ZeroTo2pi = a;
         var zb: ZeroTo2pi = b;
         var fa: Float = a;
@@ -73,5 +73,21 @@ class Angles{
         } else {
             ( clockwise )? -( 2 * Math.PI - theta ): 2 * Math.PI - theta;
         }
+    }
+    public inline static function differenceSmallLarge( a: Float, b: Float ):{ small: Float, large: Float }{
+        var za: ZeroTo2pi = a;
+        var zb: ZeroTo2pi = b;
+        var fa: Float = a;
+        var fb: Float = b;
+        var theta = Math.abs( a - b );
+        var smallest = ( theta <= Math.PI ); // smallest or equal!
+        var clockwise = a < b;
+        var dif = ( clockwise )? theta: -theta;
+        var other = ( clockwise )? -( 2 * Math.PI - theta ): 2 * Math.PI - theta;
+        return if( smallest ) {
+                    { small: dif, large: other };
+                } else {
+                    { small: other, large: dif };
+                }
     }
 }
