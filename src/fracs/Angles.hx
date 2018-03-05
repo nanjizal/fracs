@@ -60,7 +60,7 @@ class Angles{
     }
     public inline static function differenceAntiClockwise( a: Float, b: Float ): Float {
         var dif = difference( a, b );
-        return ( dif < 0 )? -dif: 2 * Math.PI - dif; 
+        return ( dif < 0 )? dif: -2 * Math.PI + dif; 
     }
     public inline static function differenceSmall( a: Float, b: Float ): Float {
         var za: ZeroTo2pi = a;
