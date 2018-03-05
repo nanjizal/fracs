@@ -56,7 +56,7 @@ Test.main = function() {
 	var frac1 = fracStore;
 	var n = frac1.numerator;
 	var d = frac1.denominator;
-	console.log(n == 0 ? "0" : n == d ? "1" : frac1.positive ? "" + n + "/" + d : "-" + n + "/" + d);
+	console.log(n == 0 ? "0" : n == d ? "1" : d == 1 ? frac1.positive ? "" + n : "-" + n : frac1.positive ? "" + n + "/" + d : "-" + n + "/" + d);
 	var all = fracs_Fracs.approximateFractions(-Math.PI);
 	var l1 = all.length;
 	var str = "";
@@ -65,34 +65,15 @@ Test.main = function() {
 		var this1 = all[_g11++];
 		var n1 = this1.numerator;
 		var d1 = this1.denominator;
-		str = str + "\n" + (n1 == 0 ? "0" : n1 == d1 ? "1" : this1.positive ? "" + n1 + "/" + d1 : "-" + n1 + "/" + d1);
+		str = str + "\n" + (n1 == 0 ? "0" : n1 == d1 ? "1" : d1 == 1 ? this1.positive ? "" + n1 : "-" + n1 : this1.positive ? "" + n1 + "/" + d1 : "-" + n1 + "/" + d1);
 	}
 	console.log(" all " + str);
 	var p;
 	console.log("from 0 -> 2pi");
 	var i = 0.;
 	while(i < 2 * Math.PI + Math.PI / 10) {
-		var out = 0;
-		if(i > 0) {
-			if(i < Math.PI) {
-				out = i;
-			} else {
-				out = i % (2 * Math.PI);
-				if(out > Math.PI) {
-					out = -(2 * Math.PI) + out;
-				}
-			}
-		} else if(i < 0) {
-			if(i > -Math.PI) {
-				out = i;
-			} else {
-				out = i % (-2 * Math.PI);
-				if(out < -Math.PI) {
-					out = 2 * Math.PI + out;
-				}
-			}
-		}
-		p = out;
+		var a = (i + Math.PI) % (2 * Math.PI);
+		p = a >= 0 ? a - Math.PI : a + Math.PI;
 		var f = p / Math.PI;
 		var arr1 = fracs_Fracs.approximateFractions(f);
 		var dist1 = Infinity;
@@ -117,8 +98,8 @@ Test.main = function() {
 		var frac3 = fracStore1;
 		var n2 = frac3.numerator;
 		var d2 = frac3.denominator;
-		var out1 = n2 == 0 ? "0" : n2 == d2 ? "1" : frac3.positive ? "" + n2 + "/" + d2 : "-" + n2 + "/" + d2;
-		if(!(frac3.denominator == 10 || out1 == "0" || out1 == "1")) {
+		var out = n2 == 0 ? "0" : n2 == d2 ? "1" : d2 == 1 ? frac3.positive ? "" + n2 : "-" + n2 : frac3.positive ? "" + n2 + "/" + d2 : "-" + n2 + "/" + d2;
+		if(!(frac3.denominator == 10 || out == "0" || out == "1")) {
 			var dom = Math.round(frac3.value * 10);
 			var numerator = dom;
 			var positive = true;
@@ -138,35 +119,16 @@ Test.main = function() {
 			var frac4 = this2;
 			var n3 = frac4.numerator;
 			var d3 = frac4.denominator;
-			out1 = n3 == 0 ? "0" : n3 == d3 ? "1" : frac4.positive ? "" + n3 + "/" + d3 : "-" + n3 + "/" + d3;
+			out = n3 == 0 ? "0" : n3 == d3 ? "1" : d3 == 1 ? frac4.positive ? "" + n3 : "-" + n3 : frac4.positive ? "" + n3 + "/" + d3 : "-" + n3 + "/" + d3;
 		}
-		console.log(out1 + " pi");
+		console.log(out + " pi");
 		i += Math.PI / 10;
 	}
 	console.log("from -pi to pi");
 	i = -Math.PI;
 	while(i < Math.PI + Math.PI / 10) {
-		var out2 = 0;
-		if(i > 0) {
-			if(i < Math.PI) {
-				out2 = i;
-			} else {
-				out2 = i % (2 * Math.PI);
-				if(out2 > Math.PI) {
-					out2 = -(2 * Math.PI) + out2;
-				}
-			}
-		} else if(i < 0) {
-			if(i > -Math.PI) {
-				out2 = i;
-			} else {
-				out2 = i % (-2 * Math.PI);
-				if(out2 < -Math.PI) {
-					out2 = 2 * Math.PI + out2;
-				}
-			}
-		}
-		p = out2;
+		var a1 = (i + Math.PI) % (2 * Math.PI);
+		p = a1 >= 0 ? a1 - Math.PI : a1 + Math.PI;
 		var f1 = p / Math.PI;
 		var arr2 = fracs_Fracs.approximateFractions(f1);
 		var dist2 = Infinity;
@@ -191,7 +153,7 @@ Test.main = function() {
 		var frac6 = fracStore2;
 		var n4 = frac6.numerator;
 		var d4 = frac6.denominator;
-		console.log((n4 == 0 ? "0" : n4 == d4 ? "1" : frac6.positive ? "" + n4 + "/" + d4 : "-" + n4 + "/" + d4) + " pi");
+		console.log((n4 == 0 ? "0" : n4 == d4 ? "1" : d4 == 1 ? frac6.positive ? "" + n4 : "-" + n4 : frac6.positive ? "" + n4 + "/" + d4 : "-" + n4 + "/" + d4) + " pi");
 		i += Math.PI / 10;
 	}
 	var arr3 = fracs_Fracs.approximateFractions(3.14159265358979);
@@ -280,16 +242,16 @@ Test.main = function() {
 	var earthTropicalYear = fracStore6;
 	var n5 = pi.numerator;
 	var d5 = pi.denominator;
-	console.log(n5 == 0 ? "0" : n5 == d5 ? "1" : pi.positive ? "" + n5 + "/" + d5 : "-" + n5 + "/" + d5);
+	console.log(n5 == 0 ? "0" : n5 == d5 ? "1" : d5 == 1 ? pi.positive ? "" + n5 : "-" + n5 : pi.positive ? "" + n5 + "/" + d5 : "-" + n5 + "/" + d5);
 	var n6 = sqrt_2.numerator;
 	var d6 = sqrt_2.denominator;
-	console.log(n6 == 0 ? "0" : n6 == d6 ? "1" : sqrt_2.positive ? "" + n6 + "/" + d6 : "-" + n6 + "/" + d6);
+	console.log(n6 == 0 ? "0" : n6 == d6 ? "1" : d6 == 1 ? sqrt_2.positive ? "" + n6 : "-" + n6 : sqrt_2.positive ? "" + n6 + "/" + d6 : "-" + n6 + "/" + d6);
 	var n7 = goldenRatio.numerator;
 	var d7 = goldenRatio.denominator;
-	console.log(n7 == 0 ? "0" : n7 == d7 ? "1" : goldenRatio.positive ? "" + n7 + "/" + d7 : "-" + n7 + "/" + d7);
+	console.log(n7 == 0 ? "0" : n7 == d7 ? "1" : d7 == 1 ? goldenRatio.positive ? "" + n7 : "-" + n7 : goldenRatio.positive ? "" + n7 + "/" + d7 : "-" + n7 + "/" + d7);
 	var n8 = earthTropicalYear.numerator;
 	var d8 = earthTropicalYear.denominator;
-	console.log(n8 == 0 ? "0" : n8 == d8 ? "1" : earthTropicalYear.positive ? "" + n8 + "/" + d8 : "-" + n8 + "/" + d8);
+	console.log(n8 == 0 ? "0" : n8 == d8 ? "1" : d8 == 1 ? earthTropicalYear.positive ? "" + n8 : "-" + n8 : earthTropicalYear.positive ? "" + n8 + "/" + d8 : "-" + n8 + "/" + d8);
 	var i1 = "1/2".indexOf("/");
 	var frac11;
 	if(i1 != -1) {
@@ -367,7 +329,7 @@ Test.main = function() {
 	var frac15 = fracStore8;
 	var n9 = frac15.numerator;
 	var d9 = frac15.denominator;
-	console.log((n9 == 0 ? "0" : n9 == d9 ? "1" : frac15.positive ? "" + n9 + "/" + d9 : "-" + n9 + "/" + d9) + "pi");
+	console.log((n9 == 0 ? "0" : n9 == d9 ? "1" : d9 == 1 ? frac15.positive ? "" + n9 : "-" + n9 : frac15.positive ? "" + n9 + "/" + d9 : "-" + n9 + "/" + d9) + "pi");
 	console.log(p * 180 / Math.PI);
 	var arr9 = fracs_Fracs.approximateFractions(0.333333333333333);
 	var dist9 = Infinity;
@@ -392,7 +354,7 @@ Test.main = function() {
 	var third = fracStore9;
 	var n10 = third.numerator;
 	var d10 = third.denominator;
-	console.log(n10 == 0 ? "0" : n10 == d10 ? "1" : third.positive ? "" + n10 + "/" + d10 : "-" + n10 + "/" + d10);
+	console.log(n10 == 0 ? "0" : n10 == d10 ? "1" : d10 == 1 ? third.positive ? "" + n10 : "-" + n10 : third.positive ? "" + n10 + "/" + d10 : "-" + n10 + "/" + d10);
 };
 var fracs__$Fraction_FractionArray_$Impl_$ = {};
 fracs__$Fraction_FractionArray_$Impl_$.add = function(this1,val) {

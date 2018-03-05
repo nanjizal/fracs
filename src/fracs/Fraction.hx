@@ -86,6 +86,8 @@ abstract Fraction( Fractional ) to Fractional from Fractional {
             '0';
         } else if ( n == d ) {
             '1';
+        } else if( d == 1 ){
+            ( this.positive )? '$n': '-$n';
         } else {
             ( this.positive )? '$n/$d': '-$n/$d';
         }

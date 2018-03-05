@@ -10,23 +10,7 @@ abstract Pi2pi( Float ) to Float {
     @:from
     static inline public 
     function fromFloat( f: Float ) {
-        var out: Float = 0;
-        if( f > 0 ){
-            if( f < Math.PI ) {
-                out = f;
-            } else {
-                out = f % ( 2*Math.PI );
-                if( out > Math.PI ) out = -(2*Math.PI) + out;
-            }
-        } else if( f < 0 ){
-            if( f > -Math.PI ){
-                out = f;
-            } else {
-                out = f % ( -2*Math.PI );
-                if( out < -Math.PI ) out = (2*Math.PI) + out;
-            }
-        }
-        return new Pi2pi( out );
+        return new Pi2pi( Angles.pi2pi( f ) );
     }
     @:op(A > B) static function gt( a:Pi2pi, b:Pi2pi ) : Bool;
     @:op(A < B) static function lt( a:Pi2pi, b:Pi2pi ) : Bool;
