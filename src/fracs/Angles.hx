@@ -1,6 +1,12 @@
 package fracs;
 import fracs.Pi2pi;
 import fracs.ZeroTo2Pi;
+enum DifferencePreference {
+    CLOCKWISE;
+    ANTICLOCKWISE;
+    SMALL;
+    LARGE;
+}
 class Angles{
     public inline static function pi2pi( angle: Float ): Float {
         return if( angle <= Math.PI && angle > -Math.PI ){
@@ -26,7 +32,19 @@ class Angles{
             var a = ( a >= 0 )? a: ( a + 2 * Math.PI );
             -( Math.PI*2 - a );
         }
-    }    
+    }
+    public inline static function differencePrefer( a: Float, b: Float, prefer: DifferencePreference ){
+        return switch( prefer ){
+            case CLOCKWISE:
+                differenceClockWise( a, b );
+            case ANTICLOCKWISE:
+                differenceAntiClockwise( a, b );
+            case SMALL:
+                differenceSmall( a, b );
+            case LARGE:
+                differenceLarge( a, b );
+        }
+    }  
     public inline static function difference( a: Float, b: Float ): Float {
         var za: ZeroTo2pi = a;
         var zb: ZeroTo2pi = b;
@@ -36,15 +54,15 @@ class Angles{
         var clockwise = a < b;
         return ( clockwise )? theta: -theta;
     }    
-    public inline static function differenceClockWise( a: Float, b: Float ){
+    public inline static function differenceClockWise( a: Float, b: Float ): Float {
         var dif = difference( a, b );
         return ( dif > 0 )? dif: 2 * Math.PI + dif; 
     }
-    public inline static function differenceAntiClockwise( a: Float, b: Float ){
+    public inline static function differenceAntiClockwise( a: Float, b: Float ): Float {
         var dif = difference( a, b );
         return ( dif < 0 )? -dif: 2 * Math.PI - dif; 
     }
-    public inline static function differenceSmall( a: Float, b: Float ){
+    public inline static function differenceSmall( a: Float, b: Float ): Float {
         var za: ZeroTo2pi = a;
         var zb: ZeroTo2pi = b;
         var fa: Float = a;
@@ -59,7 +77,7 @@ class Angles{
             ( clockwise )? -( 2 * Math.PI - theta ): 2 * Math.PI - theta;
         }
     }
-    public inline static function differenceLarge( a: Float, b: Float ){
+    public inline static function differenceLarge( a: Float, b: Float ): Float {
         var za: ZeroTo2pi = a;
         var zb: ZeroTo2pi = b;
         var fa: Float = a;
