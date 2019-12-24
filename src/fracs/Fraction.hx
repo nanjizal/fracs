@@ -1,5 +1,5 @@
-package fracs; 
-import fracs.Fraction;
+package trilateral2.angle; 
+import trilateral2.angle.Fraction;
 // numerator/denominator
 // perhaps need to add sign?
 typedef Fractional = {
@@ -101,7 +101,7 @@ abstract Fraction( Fractional ) to Fractional from Fractional {
         var dif: Float;
         var l = arr.length;
         var fracFloat: Float;
-        var frac = Fraction;
+        var frac: Fraction;
         var fracStore = arr[0];
         // finds closest
         for( i in 0...l  ){
@@ -155,7 +155,7 @@ class Fracs {
         var decimal = Math.abs( Std.parseFloat( decimalVal ) );
         return Math.isNaN(decimal)? 0. : decimal;
     }
-    @:allow(fracs.Fraction)
+    @:allow(trilateral2.angle.Fraction)
     static
     function approximateFractions( f: Float ):FractionArray{
         var positive = ( f <= 0 )? false: true;
@@ -165,7 +165,7 @@ class Fracs {
         var maxNumerator = getMaxNumerator( f2 );
         var d2 = f2;
         var calcD: Float;
-        var prevCalcD: Float = null;
+        var prevCalcD: Null<Float> = null;
         var arrFraction = new FractionArray();
         var j: Int = 0;
         for( i in 2...1000 ){
