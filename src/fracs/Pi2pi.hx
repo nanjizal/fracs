@@ -1,5 +1,5 @@
-package fracs.angle;
-import fracs.angle.Fraction;
+package fracs;
+import fracs.Fraction;
 @forward
 abstract Pi2pi( Float ) to Float {
     inline // private can't create directly
