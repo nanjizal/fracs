@@ -1,5 +1,5 @@
-package fracs.angle; 
-import fracs.angle.Fraction;
+package fracs; 
+import fracs.Fraction;
 // numerator/denominator
 // perhaps need to add sign?
 typedef Fractional = {
