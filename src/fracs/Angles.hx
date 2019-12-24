@@ -1,6 +1,6 @@
-package trilateral2.angle;
-import trilateral2.angle.Pi2pi;
-import trilateral2.angle.ZeroTo2pi;
+package fracs.angle;
+import fracs.angle.Pi2pi;
+import fracs.angle.ZeroTo2pi;
 enum DifferencePreference {
     CLOCKWISE;
     ANTICLOCKWISE;
