@@ -1,4 +1,4 @@
-package trilateral2.angle;
+package fracs.angle;
 import trilateral2.angle.Fraction;
 @forward
 abstract ZeroTo2pi( Float ) to Float {
