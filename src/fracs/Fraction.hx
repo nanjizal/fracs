@@ -155,7 +155,7 @@ class Fracs {
         var decimal = Math.abs( Std.parseFloat( decimalVal ) );
         return Math.isNaN(decimal)? 0. : decimal;
     }
-    @:allow(trilateral2.angle.Fraction)
+    @:allow(fracs.Fraction)
     static
     function approximateFractions( f: Float ):FractionArray{
         var positive = ( f <= 0 )? false: true;
