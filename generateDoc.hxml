@@ -1,0 +1,5 @@
+-D haxe4
+-cmd haxe generateCpp.hxml
+-cmd haxelib run dox -i upkeep --title "fracs API documentation" -D themeColor 0xFF9966 -D source-path https://github.com/nanjizal/fracs/tree/master/src/ --toplevel-package fracs 
+-cmd cd pages
+-cmd open index.html
