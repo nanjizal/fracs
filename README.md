@@ -21,3 +21,5 @@ trace( third ); // 1/3
 
 ( The code to deal with input string number Exponent is ported, but has been left private, and is not connected or setup for use.
 Should be easy to implement from commited code. )
+
+[0.0.1-alpha](https://github.com/nanjizal/fracs/releases/tag/0.0.1-alpha) pre-release
