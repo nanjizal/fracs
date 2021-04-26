@@ -13,19 +13,19 @@
 	support field access or operators and it's bound to monomorphs. So,
 	to work with the actual value, it needs to be explicitly promoted
 	to another type.</haxe_doc>
+		<meta><m n=":forward.variance"/></meta>
 		<impl><class path="_Any.Any_Impl_" params="" file="/usr/local/lib/haxe/std/Any.hx" private="1" module="Any" final="1">
-	<__promote params="T" get="inline" set="null" line="35" static="1">
+	<__promote params="T" get="inline" set="null" line="37" static="1">
 		<f a="this">
 			<d/>
 			<c path="__promote.T"/>
 		</f>
 		<meta>
-			<m n=":impl"/>
 			<m n=":noCompletion"/>
 			<m n=":to"/>
 		</meta>
 	</__promote>
-	<__cast params="T" get="inline" set="null" line="38" static="1">
+	<__cast params="T" get="inline" set="null" line="40" static="1">
 		<f a="value">
 			<c path="__cast.T"/>
 			<x path="Any"/>
@@ -35,32 +35,28 @@
 			<m n=":from"/>
 		</meta>
 	</__cast>
-	<toString get="inline" set="null" line="41" static="1">
+	<toString get="inline" set="null" line="43" static="1">
 		<f a="this">
 			<d/>
 			<c path="String"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":noCompletion"/>
-		</meta>
+		<meta><m n=":noCompletion"/></meta>
 	</toString>
 	<meta><m n=":keep"/></meta>
 </class></impl>
 	</abstract>
 	<class path="_Any.Any_Impl_" params="" file="/usr/local/lib/haxe/std/Any.hx" private="1" module="Any" final="1">
-		<__promote params="T" get="inline" set="null" line="35" static="1">
+		<__promote params="T" get="inline" set="null" line="37" static="1">
 			<f a="this">
 				<d/>
 				<c path="__promote.T"/>
 			</f>
 			<meta>
-				<m n=":impl"/>
 				<m n=":noCompletion"/>
 				<m n=":to"/>
 			</meta>
 		</__promote>
-		<__cast params="T" get="inline" set="null" line="38" static="1">
+		<__cast params="T" get="inline" set="null" line="40" static="1">
 			<f a="value">
 				<c path="__cast.T"/>
 				<x path="Any"/>
@@ -70,15 +66,12 @@
 				<m n=":from"/>
 			</meta>
 		</__cast>
-		<toString get="inline" set="null" line="41" static="1">
+		<toString get="inline" set="null" line="43" static="1">
 			<f a="this">
 				<d/>
 				<c path="String"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":noCompletion"/>
-			</meta>
+			<meta><m n=":noCompletion"/></meta>
 		</toString>
 		<meta><m n=":keep"/></meta>
 	</class>
@@ -1365,14 +1358,14 @@
 	<d/>
 </f></_hx_getParamI>
 		<_hx_getParameters public="1" set="method"><f a=""><c path="Array"><d/></c></f></_hx_getParameters>
-		<getIndex public="1" get="inline" set="null" line="34"><f a=""><x path="Int"/></f></getIndex>
-		<getTag public="1" get="inline" set="null" line="36"><f a=""><c path="String"/></f></getTag>
-		<getParamCount public="1" get="inline" set="null" line="38"><f a=""><x path="Int"/></f></getParamCount>
-		<getParamI public="1" get="inline" set="null" line="40"><f a="inIndex">
+		<getIndex public="1" get="inline" set="null" line="35"><f a=""><x path="Int"/></f></getIndex>
+		<getTag public="1" get="inline" set="null" line="37"><f a=""><c path="String"/></f></getTag>
+		<getParamCount public="1" get="inline" set="null" line="39"><f a=""><x path="Int"/></f></getParamCount>
+		<getParamI public="1" get="inline" set="null" line="41"><f a="inIndex">
 	<x path="Int"/>
 	<d/>
 </f></getParamI>
-		<getParameters public="1" get="inline" set="null" line="42"><f a=""><c path="Array"><d/></c></f></getParameters>
+		<getParameters public="1" get="inline" set="null" line="43"><f a=""><c path="Array"><d/></c></f></getParameters>
 		<meta><m n=":native"><e>"hx.EnumBase"</e></m></meta>
 	</class>
 	<class path="cpp.ErrorConstants" params="" file="/usr/local/lib/haxe/std/cpp/ErrorConstants.hx" extern="1">
@@ -1777,7 +1770,7 @@
 	<x path="Int"/>
 	<c path="Array"><c path="cpp.Pointer.T"/></c>
 </f></toUnmanagedArray>
-		<toUnmanagedVector public="1" get="inline" set="null" line="72"><f a="elementCount">
+		<toUnmanagedVector public="1" get="inline" set="null" line="73"><f a="elementCount">
 	<x path="Int"/>
 	<x path="haxe.ds.Vector"><c path="cpp.Pointer.T"/></x>
 </f></toUnmanagedVector>
@@ -1923,28 +1916,19 @@
 			<c path="Array"><x path="fracs.Fraction"/></c>
 			<x path="fracs.FractionArray"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":noCompletion"/>
-		</meta>
+		<meta><m n=":noCompletion"/></meta>
 	</_new>
-	<add public="1" get="inline" set="null" line="17" static="1">
-		<f a="this:val">
-			<c path="Array"><x path="fracs.Fraction"/></c>
-			<x path="fracs.Fraction"/>
-			<x path="Void"/>
-		</f>
-		<meta><m n=":impl"/></meta>
-	</add>
-	<toString public="1" get="inline" set="null" line="22" static="1">
+	<add public="1" get="inline" set="null" line="17" static="1"><f a="this:val">
+	<c path="Array"><x path="fracs.Fraction"/></c>
+	<x path="fracs.Fraction"/>
+	<x path="Void"/>
+</f></add>
+	<toString public="1" get="inline" set="null" line="23" static="1">
 		<f a="this">
 			<c path="Array"><x path="fracs.Fraction"/></c>
 			<c path="String"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":to"/>
-		</meta>
+		<meta><m n=":to"/></meta>
 	</toString>
 </class></impl>
 	</abstract>
@@ -1954,28 +1938,19 @@
 				<c path="Array"><x path="fracs.Fraction"/></c>
 				<x path="fracs.FractionArray"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":noCompletion"/>
-			</meta>
+			<meta><m n=":noCompletion"/></meta>
 		</_new>
-		<add public="1" get="inline" set="null" line="17" static="1">
-			<f a="this:val">
-				<c path="Array"><x path="fracs.Fraction"/></c>
-				<x path="fracs.Fraction"/>
-				<x path="Void"/>
-			</f>
-			<meta><m n=":impl"/></meta>
-		</add>
-		<toString public="1" get="inline" set="null" line="22" static="1">
+		<add public="1" get="inline" set="null" line="17" static="1"><f a="this:val">
+	<c path="Array"><x path="fracs.Fraction"/></c>
+	<x path="fracs.Fraction"/>
+	<x path="Void"/>
+</f></add>
+		<toString public="1" get="inline" set="null" line="23" static="1">
 			<f a="this">
 				<c path="Array"><x path="fracs.Fraction"/></c>
 				<c path="String"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":to"/>
-			</meta>
+			<meta><m n=":to"/></meta>
 		</toString>
 	</class>
 	<abstract path="fracs.Fraction" params="" file="src/fracs/Fraction.hx">
@@ -2001,102 +1976,74 @@
 		</f>
 		<meta>
 			<m n=":value"><e>{ value : null, positive : true }</e></m>
-			<m n=":impl"/>
 			<m n=":noCompletion"/>
 		</meta>
 	</_new>
-	<optimize get="inline" set="null" line="44" static="1">
-		<f a="this">
-			<t path="fracs.Fractional"/>
-			<x path="fracs.Fraction"/>
-		</f>
-		<meta><m n=":impl"/></meta>
-	</optimize>
-	<optimizeFraction get="inline" set="null" line="48" static="1">
-		<f a="this">
-			<t path="fracs.Fractional"/>
-			<x path="fracs.Fraction"/>
-		</f>
-		<meta><m n=":impl"/></meta>
-	</optimizeFraction>
-	<toFloat public="1" get="inline" set="null" line="53" static="1">
+	<optimize get="inline" set="null" line="45" static="1"><f a="this">
+	<t path="fracs.Fractional"/>
+	<x path="fracs.Fraction"/>
+</f></optimize>
+	<optimizeFraction get="inline" set="null" line="49" static="1"><f a="this">
+	<t path="fracs.Fractional"/>
+	<x path="fracs.Fraction"/>
+</f></optimizeFraction>
+	<toFloat public="1" get="inline" set="null" line="54" static="1">
 		<f a="this">
 			<t path="fracs.Fractional"/>
 			<x path="Float"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":to"/>
-		</meta>
+		<meta><m n=":to"/></meta>
 	</toFloat>
-	<float public="1" get="inline" set="null" line="61" static="1">
-		<f a="this">
-			<t path="fracs.Fractional"/>
-			<x path="Float"/>
-		</f>
-		<meta><m n=":impl"/></meta>
-	</float>
-	<verbose public="1" get="inline" set="null" line="65" static="1">
-		<f a="this">
-			<t path="fracs.Fractional"/>
-			<c path="String"/>
-		</f>
-		<meta><m n=":impl"/></meta>
-	</verbose>
-	<fromString public="1" get="inline" set="null" line="70" static="1">
+	<float public="1" get="inline" set="null" line="62" static="1"><f a="this">
+	<t path="fracs.Fractional"/>
+	<x path="Float"/>
+</f></float>
+	<verbose public="1" get="inline" set="null" line="66" static="1"><f a="this">
+	<t path="fracs.Fractional"/>
+	<c path="String"/>
+</f></verbose>
+	<fromString public="1" get="inline" set="null" line="71" static="1">
 		<f a="val">
 			<c path="String"/>
 			<x path="fracs.Fraction"/>
 		</f>
 		<meta><m n=":from"/></meta>
 	</fromString>
-	<toString public="1" get="inline" set="null" line="81" static="1">
+	<toString public="1" get="inline" set="null" line="82" static="1">
 		<f a="this">
 			<t path="fracs.Fractional"/>
 			<c path="String"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":to"/>
-		</meta>
+		<meta><m n=":to"/></meta>
 	</toString>
-	<fromFloat public="1" get="inline" set="null" line="97" static="1">
+	<fromFloat public="1" get="inline" set="null" line="98" static="1">
 		<f a="f">
 			<x path="Float"/>
 			<x path="fracs.Fraction"/>
 		</f>
 		<meta><m n=":from"/></meta>
 	</fromFloat>
-	<firstFloat public="1" get="inline" set="null" line="118" static="1"><f a="f">
+	<firstFloat public="1" get="inline" set="null" line="119" static="1"><f a="f">
 	<x path="Float"/>
 	<x path="fracs.Fraction"/>
 </f></firstFloat>
-	<byDenominator public="1" get="inline" set="null" line="125" static="1">
-		<f a="this:val">
-			<t path="fracs.Fractional"/>
-			<x path="Int"/>
-			<c path="String"/>
-		</f>
-		<meta><m n=":impl"/></meta>
-	</byDenominator>
-	<all public="1" get="inline" set="null" line="136" static="1"><f a="f">
+	<byDenominator public="1" get="inline" set="null" line="126" static="1"><f a="this:val">
+	<t path="fracs.Fractional"/>
+	<x path="Int"/>
+	<c path="String"/>
+</f></byDenominator>
+	<all public="1" get="inline" set="null" line="137" static="1"><f a="f">
 	<x path="Float"/>
 	<x path="fracs.FractionArray"/>
 </f></all>
-	<similarToFraction public="1" get="inline" set="null" line="140" static="1">
-		<f a="this">
-			<t path="fracs.Fractional"/>
-			<x path="fracs.FractionArray"/>
-		</f>
-		<meta><m n=":impl"/></meta>
-	</similarToFraction>
-	<similarToValue public="1" get="inline" set="null" line="145" static="1">
-		<f a="this">
-			<t path="fracs.Fractional"/>
-			<x path="fracs.FractionArray"/>
-		</f>
-		<meta><m n=":impl"/></meta>
-	</similarToValue>
+	<similarToFraction public="1" get="inline" set="null" line="141" static="1"><f a="this">
+	<t path="fracs.Fractional"/>
+	<x path="fracs.FractionArray"/>
+</f></similarToFraction>
+	<similarToValue public="1" get="inline" set="null" line="146" static="1"><f a="this">
+	<t path="fracs.Fractional"/>
+	<x path="fracs.FractionArray"/>
+</f></similarToValue>
 </class></impl>
 	</abstract>
 	<class path="fracs._Fraction.Fraction_Impl_" params="" file="src/fracs/Fraction.hx" private="1" module="fracs.Fraction" final="1">
@@ -2110,124 +2057,96 @@
 			</f>
 			<meta>
 				<m n=":value"><e>{ value : null, positive : true }</e></m>
-				<m n=":impl"/>
 				<m n=":noCompletion"/>
 			</meta>
 		</_new>
-		<optimize get="inline" set="null" line="44" static="1">
-			<f a="this">
-				<t path="fracs.Fractional"/>
-				<x path="fracs.Fraction"/>
-			</f>
-			<meta><m n=":impl"/></meta>
-		</optimize>
-		<optimizeFraction get="inline" set="null" line="48" static="1">
-			<f a="this">
-				<t path="fracs.Fractional"/>
-				<x path="fracs.Fraction"/>
-			</f>
-			<meta><m n=":impl"/></meta>
-		</optimizeFraction>
-		<toFloat public="1" get="inline" set="null" line="53" static="1">
+		<optimize get="inline" set="null" line="45" static="1"><f a="this">
+	<t path="fracs.Fractional"/>
+	<x path="fracs.Fraction"/>
+</f></optimize>
+		<optimizeFraction get="inline" set="null" line="49" static="1"><f a="this">
+	<t path="fracs.Fractional"/>
+	<x path="fracs.Fraction"/>
+</f></optimizeFraction>
+		<toFloat public="1" get="inline" set="null" line="54" static="1">
 			<f a="this">
 				<t path="fracs.Fractional"/>
 				<x path="Float"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":to"/>
-			</meta>
+			<meta><m n=":to"/></meta>
 		</toFloat>
-		<float public="1" get="inline" set="null" line="61" static="1">
-			<f a="this">
-				<t path="fracs.Fractional"/>
-				<x path="Float"/>
-			</f>
-			<meta><m n=":impl"/></meta>
-		</float>
-		<verbose public="1" get="inline" set="null" line="65" static="1">
-			<f a="this">
-				<t path="fracs.Fractional"/>
-				<c path="String"/>
-			</f>
-			<meta><m n=":impl"/></meta>
-		</verbose>
-		<fromString public="1" get="inline" set="null" line="70" static="1">
+		<float public="1" get="inline" set="null" line="62" static="1"><f a="this">
+	<t path="fracs.Fractional"/>
+	<x path="Float"/>
+</f></float>
+		<verbose public="1" get="inline" set="null" line="66" static="1"><f a="this">
+	<t path="fracs.Fractional"/>
+	<c path="String"/>
+</f></verbose>
+		<fromString public="1" get="inline" set="null" line="71" static="1">
 			<f a="val">
 				<c path="String"/>
 				<x path="fracs.Fraction"/>
 			</f>
 			<meta><m n=":from"/></meta>
 		</fromString>
-		<toString public="1" get="inline" set="null" line="81" static="1">
+		<toString public="1" get="inline" set="null" line="82" static="1">
 			<f a="this">
 				<t path="fracs.Fractional"/>
 				<c path="String"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":to"/>
-			</meta>
+			<meta><m n=":to"/></meta>
 		</toString>
-		<fromFloat public="1" get="inline" set="null" line="97" static="1">
+		<fromFloat public="1" get="inline" set="null" line="98" static="1">
 			<f a="f">
 				<x path="Float"/>
 				<x path="fracs.Fraction"/>
 			</f>
 			<meta><m n=":from"/></meta>
 		</fromFloat>
-		<firstFloat public="1" get="inline" set="null" line="118" static="1"><f a="f">
+		<firstFloat public="1" get="inline" set="null" line="119" static="1"><f a="f">
 	<x path="Float"/>
 	<x path="fracs.Fraction"/>
 </f></firstFloat>
-		<byDenominator public="1" get="inline" set="null" line="125" static="1">
-			<f a="this:val">
-				<t path="fracs.Fractional"/>
-				<x path="Int"/>
-				<c path="String"/>
-			</f>
-			<meta><m n=":impl"/></meta>
-		</byDenominator>
-		<all public="1" get="inline" set="null" line="136" static="1"><f a="f">
+		<byDenominator public="1" get="inline" set="null" line="126" static="1"><f a="this:val">
+	<t path="fracs.Fractional"/>
+	<x path="Int"/>
+	<c path="String"/>
+</f></byDenominator>
+		<all public="1" get="inline" set="null" line="137" static="1"><f a="f">
 	<x path="Float"/>
 	<x path="fracs.FractionArray"/>
 </f></all>
-		<similarToFraction public="1" get="inline" set="null" line="140" static="1">
-			<f a="this">
-				<t path="fracs.Fractional"/>
-				<x path="fracs.FractionArray"/>
-			</f>
-			<meta><m n=":impl"/></meta>
-		</similarToFraction>
-		<similarToValue public="1" get="inline" set="null" line="145" static="1">
-			<f a="this">
-				<t path="fracs.Fractional"/>
-				<x path="fracs.FractionArray"/>
-			</f>
-			<meta><m n=":impl"/></meta>
-		</similarToValue>
+		<similarToFraction public="1" get="inline" set="null" line="141" static="1"><f a="this">
+	<t path="fracs.Fractional"/>
+	<x path="fracs.FractionArray"/>
+</f></similarToFraction>
+		<similarToValue public="1" get="inline" set="null" line="146" static="1"><f a="this">
+	<t path="fracs.Fractional"/>
+	<x path="fracs.FractionArray"/>
+</f></similarToValue>
 	</class>
 	<class path="fracs.Fracs" params="" file="src/fracs/Fraction.hx" module="fracs.Fraction">
-		<grabDecimalInput get="inline" set="null" line="153" static="1"><f a="decimalVal">
+		<grabDecimalInput get="inline" set="null" line="154" static="1"><f a="decimalVal">
 	<c path="String"/>
 	<x path="Float"/>
 </f></grabDecimalInput>
-		<approximateFractions set="method" line="159" static="1">
+		<approximateFractions set="method" line="160" static="1">
 			<f a="f">
 				<x path="Float"/>
 				<x path="fracs.FractionArray"/>
 			</f>
 			<meta><m n=":allow"><e>fracs.Fraction</e></m></meta>
 		</approximateFractions>
-		<getMaxNumerator get="inline" set="null" line="185" static="1"><f a="f">
+		<getMaxNumerator get="inline" set="null" line="186" static="1"><f a="f">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></getMaxNumerator>
-		<extractDigitStr get="inline" set="null" line="218" static="1"><f a="fStr">
+		<extractDigitStr get="inline" set="null" line="219" static="1"><f a="fStr">
 	<c path="String"/>
 	<c path="String"/>
 </f></extractDigitStr>
-		<getMaxNumeratorStr get="inline" set="null" line="239" static="1"><f a="fStr">
+		<getMaxNumeratorStr get="inline" set="null" line="240" static="1"><f a="fStr">
 	<c path="String"/>
 	<x path="Float"/>
 </f></getMaxNumeratorStr>
@@ -2252,12 +2171,9 @@
 			<x path="Float"/>
 			<x path="fracs.Pi2pi"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":noCompletion"/>
-		</meta>
+		<meta><m n=":noCompletion"/></meta>
 	</_new>
-	<fromFloat public="1" get="inline" set="null" line="10" static="1">
+	<fromFloat public="1" get="inline" set="null" line="11" static="1">
 		<f a="f">
 			<x path="Float"/>
 			<x path="fracs.Pi2pi"/>
@@ -2270,10 +2186,7 @@
 			<x path="fracs.Pi2pi"/>
 			<x path="fracs.Pi2pi"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":op"><e>A + B</e></m>
-		</meta>
+		<meta><m n=":op"><e>A + B</e></m></meta>
 	</additionPi>
 	<subtractionPi public="1" set="method" line="24" static="1">
 		<f a="this:b">
@@ -2281,10 +2194,7 @@
 			<x path="fracs.Pi2pi"/>
 			<x path="fracs.Pi2pi"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":op"><e>A - B</e></m>
-		</meta>
+		<meta><m n=":op"><e>A - B</e></m></meta>
 	</subtractionPi>
 	<dividePi public="1" set="method" line="28" static="1">
 		<f a="this:b">
@@ -2292,10 +2202,7 @@
 			<x path="fracs.Pi2pi"/>
 			<x path="fracs.Pi2pi"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":op"><e>A / B</e></m>
-		</meta>
+		<meta><m n=":op"><e>A / B</e></m></meta>
 	</dividePi>
 	<timesPi public="1" set="method" line="32" static="1">
 		<f a="this:b">
@@ -2303,10 +2210,7 @@
 			<x path="fracs.Pi2pi"/>
 			<x path="fracs.Pi2pi"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":op"><e>A * B</e></m>
-		</meta>
+		<meta><m n=":op"><e>A * B</e></m></meta>
 	</timesPi>
 	<addition public="1" set="method" line="36" static="1">
 		<f a="this:b">
@@ -2314,10 +2218,7 @@
 			<x path="Float"/>
 			<x path="fracs.Pi2pi"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":op"><e>A + B</e></m>
-		</meta>
+		<meta><m n=":op"><e>A + B</e></m></meta>
 	</addition>
 	<subtraction public="1" set="method" line="40" static="1">
 		<f a="this:b">
@@ -2325,10 +2226,7 @@
 			<x path="Float"/>
 			<x path="fracs.Pi2pi"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":op"><e>A - B</e></m>
-		</meta>
+		<meta><m n=":op"><e>A - B</e></m></meta>
 	</subtraction>
 	<divide public="1" set="method" line="44" static="1">
 		<f a="this:b">
@@ -2336,10 +2234,7 @@
 			<x path="Float"/>
 			<x path="fracs.Pi2pi"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":op"><e>A / B</e></m>
-		</meta>
+		<meta><m n=":op"><e>A / B</e></m></meta>
 	</divide>
 	<times public="1" set="method" line="48" static="1">
 		<f a="this:b">
@@ -2347,31 +2242,19 @@
 			<x path="Float"/>
 			<x path="fracs.Pi2pi"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":op"><e>A * B</e></m>
-		</meta>
+		<meta><m n=":op"><e>A * B</e></m></meta>
 	</times>
-	<degrees public="1" get="accessor" set="accessor" static="1">
-		<x path="Float"/>
-		<meta><m n=":impl"/></meta>
-	</degrees>
-	<get_degrees public="1" get="inline" set="null" line="52" static="1">
-		<f a="this">
-			<x path="Float"/>
-			<x path="Float"/>
-		</f>
-		<meta><m n=":impl"/></meta>
-	</get_degrees>
-	<set_degrees public="1" get="inline" set="null" line="56" static="1">
-		<f a="this:val">
-			<x path="Float"/>
-			<x path="Float"/>
-			<x path="Float"/>
-		</f>
-		<meta><m n=":impl"/></meta>
-	</set_degrees>
-	<fromFraction get="inline" set="null" line="62" static="1">
+	<degrees public="1" get="accessor" set="accessor" static="1"><x path="Float"/></degrees>
+	<get_degrees public="1" get="inline" set="null" line="53" static="1"><f a="this">
+	<x path="Float"/>
+	<x path="Float"/>
+</f></get_degrees>
+	<set_degrees public="1" get="inline" set="null" line="57" static="1"><f a="this:val">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+</f></set_degrees>
+	<fromFraction get="inline" set="null" line="63" static="1">
 		<f a="val">
 			<x path="fracs.Fraction"/>
 			<x path="fracs.Pi2pi"/>
@@ -2383,27 +2266,21 @@
 			<x path="Float"/>
 			<x path="fracs.Fraction"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":to"/>
-		</meta>
+		<meta><m n=":to"/></meta>
 	</tofraction>
-	<fromString get="inline" set="null" line="71" static="1">
+	<fromString get="inline" set="null" line="72" static="1">
 		<f a="val">
 			<c path="String"/>
 			<x path="fracs.Pi2pi"/>
 		</f>
 		<meta><m n=":from"/></meta>
 	</fromString>
-	<toString public="1" get="inline" set="null" line="77" static="1">
+	<toString public="1" get="inline" set="null" line="78" static="1">
 		<f a="this">
 			<x path="Float"/>
 			<c path="String"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":to"/>
-		</meta>
+		<meta><m n=":to"/></meta>
 	</toString>
 </class></impl>
 	</abstract>
@@ -2413,12 +2290,9 @@
 				<x path="Float"/>
 				<x path="fracs.Pi2pi"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":noCompletion"/>
-			</meta>
+			<meta><m n=":noCompletion"/></meta>
 		</_new>
-		<fromFloat public="1" get="inline" set="null" line="10" static="1">
+		<fromFloat public="1" get="inline" set="null" line="11" static="1">
 			<f a="f">
 				<x path="Float"/>
 				<x path="fracs.Pi2pi"/>
@@ -2431,10 +2305,7 @@
 				<x path="fracs.Pi2pi"/>
 				<x path="fracs.Pi2pi"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":op"><e>A + B</e></m>
-			</meta>
+			<meta><m n=":op"><e>A + B</e></m></meta>
 		</additionPi>
 		<subtractionPi public="1" set="method" line="24" static="1">
 			<f a="this:b">
@@ -2442,10 +2313,7 @@
 				<x path="fracs.Pi2pi"/>
 				<x path="fracs.Pi2pi"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":op"><e>A - B</e></m>
-			</meta>
+			<meta><m n=":op"><e>A - B</e></m></meta>
 		</subtractionPi>
 		<dividePi public="1" set="method" line="28" static="1">
 			<f a="this:b">
@@ -2453,10 +2321,7 @@
 				<x path="fracs.Pi2pi"/>
 				<x path="fracs.Pi2pi"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":op"><e>A / B</e></m>
-			</meta>
+			<meta><m n=":op"><e>A / B</e></m></meta>
 		</dividePi>
 		<timesPi public="1" set="method" line="32" static="1">
 			<f a="this:b">
@@ -2464,10 +2329,7 @@
 				<x path="fracs.Pi2pi"/>
 				<x path="fracs.Pi2pi"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":op"><e>A * B</e></m>
-			</meta>
+			<meta><m n=":op"><e>A * B</e></m></meta>
 		</timesPi>
 		<addition public="1" set="method" line="36" static="1">
 			<f a="this:b">
@@ -2475,10 +2337,7 @@
 				<x path="Float"/>
 				<x path="fracs.Pi2pi"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":op"><e>A + B</e></m>
-			</meta>
+			<meta><m n=":op"><e>A + B</e></m></meta>
 		</addition>
 		<subtraction public="1" set="method" line="40" static="1">
 			<f a="this:b">
@@ -2486,10 +2345,7 @@
 				<x path="Float"/>
 				<x path="fracs.Pi2pi"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":op"><e>A - B</e></m>
-			</meta>
+			<meta><m n=":op"><e>A - B</e></m></meta>
 		</subtraction>
 		<divide public="1" set="method" line="44" static="1">
 			<f a="this:b">
@@ -2497,10 +2353,7 @@
 				<x path="Float"/>
 				<x path="fracs.Pi2pi"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":op"><e>A / B</e></m>
-			</meta>
+			<meta><m n=":op"><e>A / B</e></m></meta>
 		</divide>
 		<times public="1" set="method" line="48" static="1">
 			<f a="this:b">
@@ -2508,31 +2361,19 @@
 				<x path="Float"/>
 				<x path="fracs.Pi2pi"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":op"><e>A * B</e></m>
-			</meta>
+			<meta><m n=":op"><e>A * B</e></m></meta>
 		</times>
-		<degrees public="1" get="accessor" set="accessor" static="1">
-			<x path="Float"/>
-			<meta><m n=":impl"/></meta>
-		</degrees>
-		<get_degrees public="1" get="inline" set="null" line="52" static="1">
-			<f a="this">
-				<x path="Float"/>
-				<x path="Float"/>
-			</f>
-			<meta><m n=":impl"/></meta>
-		</get_degrees>
-		<set_degrees public="1" get="inline" set="null" line="56" static="1">
-			<f a="this:val">
-				<x path="Float"/>
-				<x path="Float"/>
-				<x path="Float"/>
-			</f>
-			<meta><m n=":impl"/></meta>
-		</set_degrees>
-		<fromFraction get="inline" set="null" line="62" static="1">
+		<degrees public="1" get="accessor" set="accessor" static="1"><x path="Float"/></degrees>
+		<get_degrees public="1" get="inline" set="null" line="53" static="1"><f a="this">
+	<x path="Float"/>
+	<x path="Float"/>
+</f></get_degrees>
+		<set_degrees public="1" get="inline" set="null" line="57" static="1"><f a="this:val">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+</f></set_degrees>
+		<fromFraction get="inline" set="null" line="63" static="1">
 			<f a="val">
 				<x path="fracs.Fraction"/>
 				<x path="fracs.Pi2pi"/>
@@ -2544,27 +2385,898 @@
 				<x path="Float"/>
 				<x path="fracs.Fraction"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":to"/>
-			</meta>
+			<meta><m n=":to"/></meta>
 		</tofraction>
-		<fromString get="inline" set="null" line="71" static="1">
+		<fromString get="inline" set="null" line="72" static="1">
 			<f a="val">
 				<c path="String"/>
 				<x path="fracs.Pi2pi"/>
 			</f>
 			<meta><m n=":from"/></meta>
 		</fromString>
-		<toString public="1" get="inline" set="null" line="77" static="1">
+		<toString public="1" get="inline" set="null" line="78" static="1">
 			<f a="this">
 				<x path="Float"/>
 				<c path="String"/>
 			</f>
+			<meta><m n=":to"/></meta>
+		</toString>
+	</class>
+	<abstract path="fracs.Rose32" params="" file="src/fracs/Rose.hx" module="fracs.Rose">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<haxe_doc>32 Compass Rose names</haxe_doc>
+		<meta>
+			<m n=":enum"/>
+			<m n=":forward"/>
+		</meta>
+		<impl><class path="fracs._Rose.Rose32_Impl_" params="" file="src/fracs/Rose.hx" private="1" module="fracs.Rose" extern="1" final="1">
+	<N public="1" get="inline" set="null" expr="cast 0" line="10" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 0</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</N>
+	<NbE public="1" get="inline" set="null" expr="cast 1" line="11" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 1</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</NbE>
+	<NNE public="1" get="inline" set="null" expr="cast 2" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 2</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</NNE>
+	<NEbN public="1" get="inline" set="null" expr="cast 3" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 3</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</NEbN>
+	<NE public="1" get="inline" set="null" expr="cast 4" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 4</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</NE>
+	<NEbE public="1" get="inline" set="null" expr="cast 5" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 5</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</NEbE>
+	<ENE public="1" get="inline" set="null" expr="cast 6" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 6</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</ENE>
+	<EbN public="1" get="inline" set="null" expr="cast 7" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 7</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</EbN>
+	<E public="1" get="inline" set="null" expr="cast 8" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 8</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</E>
+	<EbS public="1" get="inline" set="null" expr="cast 9" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 9</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</EbS>
+	<ESE public="1" get="inline" set="null" expr="cast 10" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 10</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</ESE>
+	<SEbE public="1" get="inline" set="null" expr="cast 11" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 11</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</SEbE>
+	<SE public="1" get="inline" set="null" expr="cast 12" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 12</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</SE>
+	<SEbS public="1" get="inline" set="null" expr="cast 13" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 13</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</SEbS>
+	<SSE public="1" get="inline" set="null" expr="cast 14" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 14</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</SSE>
+	<SbE public="1" get="inline" set="null" expr="cast 15" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 15</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</SbE>
+	<S public="1" get="inline" set="null" expr="cast 16" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 16</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</S>
+	<SbW public="1" get="inline" set="null" expr="cast 17" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 17</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</SbW>
+	<SSW public="1" get="inline" set="null" expr="cast 18" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 18</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</SSW>
+	<SWbS public="1" get="inline" set="null" expr="cast 19" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 19</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</SWbS>
+	<SW public="1" get="inline" set="null" expr="cast 20" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 20</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</SW>
+	<SWbW public="1" get="inline" set="null" expr="cast 21" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 21</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</SWbW>
+	<WSW public="1" get="inline" set="null" expr="cast 22" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 22</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</WSW>
+	<WbS public="1" get="inline" set="null" expr="cast 23" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 23</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</WbS>
+	<W public="1" get="inline" set="null" expr="cast 24" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 24</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</W>
+	<WbN public="1" get="inline" set="null" expr="cast 25" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 25</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</WbN>
+	<WNW public="1" get="inline" set="null" expr="cast 26" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 26</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</WNW>
+	<NWbW public="1" get="inline" set="null" expr="cast 27" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 27</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</NWbW>
+	<NW public="1" get="inline" set="null" expr="cast 28" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 28</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</NW>
+	<NWbN public="1" get="inline" set="null" expr="cast 29" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 29</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</NWbN>
+	<NNW public="1" get="inline" set="null" expr="cast 30" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 30</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</NNW>
+	<NbW public="1" get="inline" set="null" expr="cast 31" line="1" static="1">
+		<x path="fracs.Rose32"/>
+		<meta>
+			<m n=":value"><e>cast 31</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</NbW>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="fracs._Rose.Rose32_Impl_" params="" file="src/fracs/Rose.hx" private="1" module="fracs.Rose" extern="1" final="1">
+		<N public="1" get="inline" set="null" expr="cast 0" line="10" static="1">
+			<x path="fracs.Rose32"/>
 			<meta>
+				<m n=":value"><e>cast 0</e></m>
 				<m n=":impl"/>
-				<m n=":to"/>
+				<m n=":enum"/>
 			</meta>
+		</N>
+		<NbE public="1" get="inline" set="null" expr="cast 1" line="11" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 1</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</NbE>
+		<NNE public="1" get="inline" set="null" expr="cast 2" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 2</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</NNE>
+		<NEbN public="1" get="inline" set="null" expr="cast 3" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 3</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</NEbN>
+		<NE public="1" get="inline" set="null" expr="cast 4" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 4</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</NE>
+		<NEbE public="1" get="inline" set="null" expr="cast 5" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 5</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</NEbE>
+		<ENE public="1" get="inline" set="null" expr="cast 6" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 6</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</ENE>
+		<EbN public="1" get="inline" set="null" expr="cast 7" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 7</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</EbN>
+		<E public="1" get="inline" set="null" expr="cast 8" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 8</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</E>
+		<EbS public="1" get="inline" set="null" expr="cast 9" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 9</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</EbS>
+		<ESE public="1" get="inline" set="null" expr="cast 10" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 10</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</ESE>
+		<SEbE public="1" get="inline" set="null" expr="cast 11" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 11</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</SEbE>
+		<SE public="1" get="inline" set="null" expr="cast 12" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 12</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</SE>
+		<SEbS public="1" get="inline" set="null" expr="cast 13" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 13</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</SEbS>
+		<SSE public="1" get="inline" set="null" expr="cast 14" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 14</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</SSE>
+		<SbE public="1" get="inline" set="null" expr="cast 15" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 15</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</SbE>
+		<S public="1" get="inline" set="null" expr="cast 16" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 16</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</S>
+		<SbW public="1" get="inline" set="null" expr="cast 17" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 17</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</SbW>
+		<SSW public="1" get="inline" set="null" expr="cast 18" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 18</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</SSW>
+		<SWbS public="1" get="inline" set="null" expr="cast 19" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 19</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</SWbS>
+		<SW public="1" get="inline" set="null" expr="cast 20" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 20</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</SW>
+		<SWbW public="1" get="inline" set="null" expr="cast 21" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 21</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</SWbW>
+		<WSW public="1" get="inline" set="null" expr="cast 22" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 22</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</WSW>
+		<WbS public="1" get="inline" set="null" expr="cast 23" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 23</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</WbS>
+		<W public="1" get="inline" set="null" expr="cast 24" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 24</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</W>
+		<WbN public="1" get="inline" set="null" expr="cast 25" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 25</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</WbN>
+		<WNW public="1" get="inline" set="null" expr="cast 26" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 26</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</WNW>
+		<NWbW public="1" get="inline" set="null" expr="cast 27" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 27</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</NWbW>
+		<NW public="1" get="inline" set="null" expr="cast 28" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 28</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</NW>
+		<NWbN public="1" get="inline" set="null" expr="cast 29" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 29</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</NWbN>
+		<NNW public="1" get="inline" set="null" expr="cast 30" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 30</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</NNW>
+		<NbW public="1" get="inline" set="null" expr="cast 31" line="1" static="1">
+			<x path="fracs.Rose32"/>
+			<meta>
+				<m n=":value"><e>cast 31</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</NbW>
+		<meta><m n=":enum"/></meta>
+	</class>
+	<abstract path="fracs.Rose" params="" file="src/fracs/Rose.hx">
+		<from>
+			<icast><x path="fracs.Rose32"/></icast>
+			<icast field="fromRadians"><x path="Float"/></icast>
+			<icast field="from32"><x path="Int"/></icast>
+		</from>
+		<this><x path="fracs.Rose32"/></this>
+		<to>
+			<icast><x path="fracs.Rose32"/></icast>
+			<icast field="toInt"><x path="Int"/></icast>
+			<icast field="tofraction"><x path="fracs.Fraction"/></icast>
+			<icast field="toRadians"><x path="Float"/></icast>
+			<icast field="toPie"><x path="fracs.ZeroTo2pi"/></icast>
+			<icast field="toString"><c path="String"/></icast>
+		</to>
+		<haxe_doc>Compass Rose</haxe_doc>
+		<meta>
+			<m n=":transitive"/>
+			<m n=":forward"/>
+		</meta>
+		<impl><class path="fracs._Rose.Rose_Impl_" params="" file="src/fracs/Rose.hx" private="1" module="fracs.Rose" final="1">
+	<_new public="1" get="inline" set="null" line="49" static="1">
+		<f a="rose">
+			<x path="fracs.Rose32"/>
+			<x path="fracs.Rose"/>
+		</f>
+		<meta><m n=":noCompletion"/></meta>
+	</_new>
+	<toInt public="1" get="inline" set="null" line="56" static="1">
+		<f a="this">
+			<x path="fracs.Rose32"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":to"/></meta>
+	</toInt>
+	<fromRadians public="1" get="inline" set="null" line="61" static="1">
+		<f a="f">
+			<x path="Float"/>
+			<x path="fracs.Rose"/>
+		</f>
+		<meta><m n=":from"/></meta>
+	</fromRadians>
+	<compassInt get="inline" set="null" line="65" static="1"><f a="v">
+	<x path="Int"/>
+	<x path="Void"/>
+</f></compassInt>
+	<from8 get="inline" set="null" line="68" static="1"><f a="v">
+	<x path="Int"/>
+	<x path="Void"/>
+</f></from8>
+	<from16 get="inline" set="null" line="71" static="1"><f a="v">
+	<x path="Int"/>
+	<x path="Void"/>
+</f></from16>
+	<from32 get="inline" set="null" line="75" static="1">
+		<f a="v">
+			<x path="Int"/>
+			<x path="fracs.Rose"/>
+		</f>
+		<meta><m n=":from"/></meta>
+	</from32>
+	<clock90 public="1" get="inline" set="null" line="86" static="1"><f a="this">
+	<x path="fracs.Rose32"/>
+	<x path="fracs.Rose"/>
+</f></clock90>
+	<antiClock90 public="1" get="inline" set="null" line="91" static="1"><f a="this">
+	<x path="fracs.Rose32"/>
+	<x path="fracs.Rose"/>
+</f></antiClock90>
+	<quarterClock90 public="1" get="inline" set="null" line="96" static="1"><f a="this">
+	<x path="fracs.Rose32"/>
+	<x path="fracs.Rose"/>
+</f></quarterClock90>
+	<quarterAntiClock90 public="1" get="inline" set="null" line="101" static="1"><f a="this">
+	<x path="fracs.Rose32"/>
+	<x path="fracs.Rose"/>
+</f></quarterAntiClock90>
+	<opposite public="1" get="inline" set="null" line="106" static="1"><f a="this">
+	<x path="fracs.Rose32"/>
+	<x path="fracs.Rose"/>
+</f></opposite>
+	<tofraction get="inline" set="null" line="111" static="1">
+		<f a="this">
+			<x path="fracs.Rose32"/>
+			<x path="fracs.Fraction"/>
+		</f>
+		<meta><m n=":to"/></meta>
+	</tofraction>
+	<toRadians public="1" get="inline" set="null" line="116" static="1">
+		<f a="this">
+			<x path="fracs.Rose32"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":to"/></meta>
+	</toRadians>
+	<toPie public="1" get="inline" set="null" line="122" static="1">
+		<f a="this">
+			<x path="fracs.Rose32"/>
+			<x path="fracs.ZeroTo2pi"/>
+		</f>
+		<meta><m n=":to"/></meta>
+	</toPie>
+	<minus1 public="1" get="inline" set="null" line="127" static="1">
+		<f a="this">
+			<x path="fracs.Rose32"/>
+			<x path="fracs.Rose32"/>
+		</f>
+		<meta><m n=":op"><e>A--</e></m></meta>
+	</minus1>
+	<plus1 public="1" get="inline" set="null" line="132" static="1">
+		<f a="this">
+			<x path="fracs.Rose32"/>
+			<x path="fracs.Rose32"/>
+		</f>
+		<meta><m n=":op"><e>A++</e></m></meta>
+	</plus1>
+	<adding public="1" get="inline" set="null" line="138" static="1">
+		<f a="a:b">
+			<x path="fracs.Rose"/>
+			<x path="fracs.Rose"/>
+			<x path="fracs.Rose"/>
+		</f>
+		<meta><m n=":op"><e>A + B</e></m></meta>
+	</adding>
+	<add public="1" get="inline" set="null" line="142" static="1"><f a="this:b">
+	<x path="fracs.Rose32"/>
+	<x path="fracs.Rose"/>
+	<x path="fracs.Rose"/>
+</f></add>
+	<subtracting public="1" get="inline" set="null" line="147" static="1">
+		<f a="a:b">
+			<x path="fracs.Rose"/>
+			<x path="fracs.Rose"/>
+			<x path="fracs.Rose"/>
+		</f>
+		<meta><m n=":op"><e>A - B</e></m></meta>
+	</subtracting>
+	<subtract public="1" get="inline" set="null" line="151" static="1"><f a="this:b">
+	<x path="fracs.Rose32"/>
+	<x path="fracs.Rose"/>
+	<x path="fracs.Rose"/>
+</f></subtract>
+	<isEqualling public="1" get="inline" set="null" line="156" static="1">
+		<f a="a:b">
+			<x path="fracs.Rose"/>
+			<x path="fracs.Rose"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":op"><e>A == B</e></m></meta>
+	</isEqualling>
+	<isEqual public="1" get="inline" set="null" line="159" static="1"><f a="this:b">
+	<x path="fracs.Rose32"/>
+	<x path="fracs.Rose"/>
+	<x path="Bool"/>
+</f></isEqual>
+	<notEqual public="1" get="inline" set="null" line="163" static="1">
+		<f a="a:b">
+			<x path="fracs.Rose"/>
+			<x path="fracs.Rose"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":op"><e>A != B</e></m></meta>
+	</notEqual>
+	<no public="1" get="accessor" set="accessor" static="1">
+		<x path="Int"/>
+		<haxe_doc>Int getter setter for value</haxe_doc>
+	</no>
+	<get_no get="inline" set="null" line="171" static="1"><f a="this">
+	<x path="fracs.Rose32"/>
+	<x path="Int"/>
+</f></get_no>
+	<set_no get="inline" set="null" line="175" static="1"><f a="this:v">
+	<x path="fracs.Rose32"/>
+	<x path="Int"/>
+	<x path="Int"/>
+</f></set_no>
+	<toString public="1" get="inline" set="null" line="181" static="1">
+		<f a="this">
+			<x path="fracs.Rose32"/>
+			<c path="String"/>
+		</f>
+		<meta><m n=":to"/></meta>
+	</toString>
+</class></impl>
+	</abstract>
+	<class path="fracs._Rose.Rose_Impl_" params="" file="src/fracs/Rose.hx" private="1" module="fracs.Rose" final="1">
+		<_new public="1" get="inline" set="null" line="49" static="1">
+			<f a="rose">
+				<x path="fracs.Rose32"/>
+				<x path="fracs.Rose"/>
+			</f>
+			<meta><m n=":noCompletion"/></meta>
+		</_new>
+		<toInt public="1" get="inline" set="null" line="56" static="1">
+			<f a="this">
+				<x path="fracs.Rose32"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":to"/></meta>
+		</toInt>
+		<fromRadians public="1" get="inline" set="null" line="61" static="1">
+			<f a="f">
+				<x path="Float"/>
+				<x path="fracs.Rose"/>
+			</f>
+			<meta><m n=":from"/></meta>
+		</fromRadians>
+		<compassInt get="inline" set="null" line="65" static="1"><f a="v">
+	<x path="Int"/>
+	<x path="Void"/>
+</f></compassInt>
+		<from8 get="inline" set="null" line="68" static="1"><f a="v">
+	<x path="Int"/>
+	<x path="Void"/>
+</f></from8>
+		<from16 get="inline" set="null" line="71" static="1"><f a="v">
+	<x path="Int"/>
+	<x path="Void"/>
+</f></from16>
+		<from32 get="inline" set="null" line="75" static="1">
+			<f a="v">
+				<x path="Int"/>
+				<x path="fracs.Rose"/>
+			</f>
+			<meta><m n=":from"/></meta>
+		</from32>
+		<clock90 public="1" get="inline" set="null" line="86" static="1"><f a="this">
+	<x path="fracs.Rose32"/>
+	<x path="fracs.Rose"/>
+</f></clock90>
+		<antiClock90 public="1" get="inline" set="null" line="91" static="1"><f a="this">
+	<x path="fracs.Rose32"/>
+	<x path="fracs.Rose"/>
+</f></antiClock90>
+		<quarterClock90 public="1" get="inline" set="null" line="96" static="1"><f a="this">
+	<x path="fracs.Rose32"/>
+	<x path="fracs.Rose"/>
+</f></quarterClock90>
+		<quarterAntiClock90 public="1" get="inline" set="null" line="101" static="1"><f a="this">
+	<x path="fracs.Rose32"/>
+	<x path="fracs.Rose"/>
+</f></quarterAntiClock90>
+		<opposite public="1" get="inline" set="null" line="106" static="1"><f a="this">
+	<x path="fracs.Rose32"/>
+	<x path="fracs.Rose"/>
+</f></opposite>
+		<tofraction get="inline" set="null" line="111" static="1">
+			<f a="this">
+				<x path="fracs.Rose32"/>
+				<x path="fracs.Fraction"/>
+			</f>
+			<meta><m n=":to"/></meta>
+		</tofraction>
+		<toRadians public="1" get="inline" set="null" line="116" static="1">
+			<f a="this">
+				<x path="fracs.Rose32"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":to"/></meta>
+		</toRadians>
+		<toPie public="1" get="inline" set="null" line="122" static="1">
+			<f a="this">
+				<x path="fracs.Rose32"/>
+				<x path="fracs.ZeroTo2pi"/>
+			</f>
+			<meta><m n=":to"/></meta>
+		</toPie>
+		<minus1 public="1" get="inline" set="null" line="127" static="1">
+			<f a="this">
+				<x path="fracs.Rose32"/>
+				<x path="fracs.Rose32"/>
+			</f>
+			<meta><m n=":op"><e>A--</e></m></meta>
+		</minus1>
+		<plus1 public="1" get="inline" set="null" line="132" static="1">
+			<f a="this">
+				<x path="fracs.Rose32"/>
+				<x path="fracs.Rose32"/>
+			</f>
+			<meta><m n=":op"><e>A++</e></m></meta>
+		</plus1>
+		<adding public="1" get="inline" set="null" line="138" static="1">
+			<f a="a:b">
+				<x path="fracs.Rose"/>
+				<x path="fracs.Rose"/>
+				<x path="fracs.Rose"/>
+			</f>
+			<meta><m n=":op"><e>A + B</e></m></meta>
+		</adding>
+		<add public="1" get="inline" set="null" line="142" static="1"><f a="this:b">
+	<x path="fracs.Rose32"/>
+	<x path="fracs.Rose"/>
+	<x path="fracs.Rose"/>
+</f></add>
+		<subtracting public="1" get="inline" set="null" line="147" static="1">
+			<f a="a:b">
+				<x path="fracs.Rose"/>
+				<x path="fracs.Rose"/>
+				<x path="fracs.Rose"/>
+			</f>
+			<meta><m n=":op"><e>A - B</e></m></meta>
+		</subtracting>
+		<subtract public="1" get="inline" set="null" line="151" static="1"><f a="this:b">
+	<x path="fracs.Rose32"/>
+	<x path="fracs.Rose"/>
+	<x path="fracs.Rose"/>
+</f></subtract>
+		<isEqualling public="1" get="inline" set="null" line="156" static="1">
+			<f a="a:b">
+				<x path="fracs.Rose"/>
+				<x path="fracs.Rose"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":op"><e>A == B</e></m></meta>
+		</isEqualling>
+		<isEqual public="1" get="inline" set="null" line="159" static="1"><f a="this:b">
+	<x path="fracs.Rose32"/>
+	<x path="fracs.Rose"/>
+	<x path="Bool"/>
+</f></isEqual>
+		<notEqual public="1" get="inline" set="null" line="163" static="1">
+			<f a="a:b">
+				<x path="fracs.Rose"/>
+				<x path="fracs.Rose"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":op"><e>A != B</e></m></meta>
+		</notEqual>
+		<no public="1" get="accessor" set="accessor" static="1">
+			<x path="Int"/>
+			<haxe_doc>Int getter setter for value</haxe_doc>
+		</no>
+		<get_no get="inline" set="null" line="171" static="1"><f a="this">
+	<x path="fracs.Rose32"/>
+	<x path="Int"/>
+</f></get_no>
+		<set_no get="inline" set="null" line="175" static="1"><f a="this:v">
+	<x path="fracs.Rose32"/>
+	<x path="Int"/>
+	<x path="Int"/>
+</f></set_no>
+		<toString public="1" get="inline" set="null" line="181" static="1">
+			<f a="this">
+				<x path="fracs.Rose32"/>
+				<c path="String"/>
+			</f>
+			<meta><m n=":to"/></meta>
 		</toString>
 	</class>
 	<abstract path="fracs.ZeroTo2pi" params="" file="src/fracs/ZeroTo2pi.hx">
@@ -2586,12 +3298,9 @@
 			<x path="Float"/>
 			<x path="fracs.ZeroTo2pi"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":noCompletion"/>
-		</meta>
+		<meta><m n=":noCompletion"/></meta>
 	</_new>
-	<fromFloat public="1" get="inline" set="null" line="10" static="1">
+	<fromFloat public="1" get="inline" set="null" line="11" static="1">
 		<f a="f">
 			<x path="Float"/>
 			<x path="fracs.ZeroTo2pi"/>
@@ -2604,10 +3313,7 @@
 			<x path="fracs.ZeroTo2pi"/>
 			<x path="fracs.ZeroTo2pi"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":op"><e>A + B</e></m>
-		</meta>
+		<meta><m n=":op"><e>A + B</e></m></meta>
 	</additionPi>
 	<subtractionPi public="1" set="method" line="24" static="1">
 		<f a="this:b">
@@ -2615,10 +3321,7 @@
 			<x path="fracs.ZeroTo2pi"/>
 			<x path="fracs.ZeroTo2pi"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":op"><e>A - B</e></m>
-		</meta>
+		<meta><m n=":op"><e>A - B</e></m></meta>
 	</subtractionPi>
 	<dividePi public="1" set="method" line="28" static="1">
 		<f a="this:b">
@@ -2626,10 +3329,7 @@
 			<x path="fracs.ZeroTo2pi"/>
 			<x path="fracs.ZeroTo2pi"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":op"><e>A / B</e></m>
-		</meta>
+		<meta><m n=":op"><e>A / B</e></m></meta>
 	</dividePi>
 	<timesPi public="1" set="method" line="32" static="1">
 		<f a="this:b">
@@ -2637,10 +3337,7 @@
 			<x path="fracs.ZeroTo2pi"/>
 			<x path="fracs.ZeroTo2pi"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":op"><e>A * B</e></m>
-		</meta>
+		<meta><m n=":op"><e>A * B</e></m></meta>
 	</timesPi>
 	<addition public="1" set="method" line="36" static="1">
 		<f a="this:b">
@@ -2648,10 +3345,7 @@
 			<x path="Float"/>
 			<x path="fracs.ZeroTo2pi"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":op"><e>A + B</e></m>
-		</meta>
+		<meta><m n=":op"><e>A + B</e></m></meta>
 	</addition>
 	<subtraction public="1" set="method" line="40" static="1">
 		<f a="this:b">
@@ -2659,10 +3353,7 @@
 			<x path="Float"/>
 			<x path="fracs.ZeroTo2pi"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":op"><e>A - B</e></m>
-		</meta>
+		<meta><m n=":op"><e>A - B</e></m></meta>
 	</subtraction>
 	<divide public="1" set="method" line="44" static="1">
 		<f a="this:b">
@@ -2670,10 +3361,7 @@
 			<x path="Float"/>
 			<x path="fracs.ZeroTo2pi"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":op"><e>A / B</e></m>
-		</meta>
+		<meta><m n=":op"><e>A / B</e></m></meta>
 	</divide>
 	<times public="1" set="method" line="48" static="1">
 		<f a="this:b">
@@ -2681,31 +3369,19 @@
 			<x path="Float"/>
 			<x path="fracs.ZeroTo2pi"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":op"><e>A * B</e></m>
-		</meta>
+		<meta><m n=":op"><e>A * B</e></m></meta>
 	</times>
-	<degrees public="1" get="accessor" set="accessor" static="1">
-		<x path="Float"/>
-		<meta><m n=":impl"/></meta>
-	</degrees>
-	<get_degrees public="1" get="inline" set="null" line="52" static="1">
-		<f a="this">
-			<x path="Float"/>
-			<x path="Float"/>
-		</f>
-		<meta><m n=":impl"/></meta>
-	</get_degrees>
-	<set_degrees public="1" get="inline" set="null" line="56" static="1">
-		<f a="this:val">
-			<x path="Float"/>
-			<x path="Float"/>
-			<x path="Float"/>
-		</f>
-		<meta><m n=":impl"/></meta>
-	</set_degrees>
-	<fromFraction get="inline" set="null" line="62" static="1">
+	<degrees public="1" get="accessor" set="accessor" static="1"><x path="Float"/></degrees>
+	<get_degrees public="1" get="inline" set="null" line="53" static="1"><f a="this">
+	<x path="Float"/>
+	<x path="Float"/>
+</f></get_degrees>
+	<set_degrees public="1" get="inline" set="null" line="57" static="1"><f a="this:val">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+</f></set_degrees>
+	<fromFraction get="inline" set="null" line="63" static="1">
 		<f a="val">
 			<x path="fracs.Fraction"/>
 			<x path="fracs.ZeroTo2pi"/>
@@ -2717,27 +3393,21 @@
 			<x path="Float"/>
 			<x path="fracs.Fraction"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":to"/>
-		</meta>
+		<meta><m n=":to"/></meta>
 	</tofraction>
-	<fromString get="inline" set="null" line="71" static="1">
+	<fromString get="inline" set="null" line="72" static="1">
 		<f a="val">
 			<c path="String"/>
 			<x path="fracs.ZeroTo2pi"/>
 		</f>
 		<meta><m n=":from"/></meta>
 	</fromString>
-	<toString public="1" get="inline" set="null" line="77" static="1">
+	<toString public="1" get="inline" set="null" line="78" static="1">
 		<f a="this">
 			<x path="Float"/>
 			<c path="String"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":to"/>
-		</meta>
+		<meta><m n=":to"/></meta>
 	</toString>
 </class></impl>
 	</abstract>
@@ -2747,12 +3417,9 @@
 				<x path="Float"/>
 				<x path="fracs.ZeroTo2pi"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":noCompletion"/>
-			</meta>
+			<meta><m n=":noCompletion"/></meta>
 		</_new>
-		<fromFloat public="1" get="inline" set="null" line="10" static="1">
+		<fromFloat public="1" get="inline" set="null" line="11" static="1">
 			<f a="f">
 				<x path="Float"/>
 				<x path="fracs.ZeroTo2pi"/>
@@ -2765,10 +3432,7 @@
 				<x path="fracs.ZeroTo2pi"/>
 				<x path="fracs.ZeroTo2pi"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":op"><e>A + B</e></m>
-			</meta>
+			<meta><m n=":op"><e>A + B</e></m></meta>
 		</additionPi>
 		<subtractionPi public="1" set="method" line="24" static="1">
 			<f a="this:b">
@@ -2776,10 +3440,7 @@
 				<x path="fracs.ZeroTo2pi"/>
 				<x path="fracs.ZeroTo2pi"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":op"><e>A - B</e></m>
-			</meta>
+			<meta><m n=":op"><e>A - B</e></m></meta>
 		</subtractionPi>
 		<dividePi public="1" set="method" line="28" static="1">
 			<f a="this:b">
@@ -2787,10 +3448,7 @@
 				<x path="fracs.ZeroTo2pi"/>
 				<x path="fracs.ZeroTo2pi"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":op"><e>A / B</e></m>
-			</meta>
+			<meta><m n=":op"><e>A / B</e></m></meta>
 		</dividePi>
 		<timesPi public="1" set="method" line="32" static="1">
 			<f a="this:b">
@@ -2798,10 +3456,7 @@
 				<x path="fracs.ZeroTo2pi"/>
 				<x path="fracs.ZeroTo2pi"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":op"><e>A * B</e></m>
-			</meta>
+			<meta><m n=":op"><e>A * B</e></m></meta>
 		</timesPi>
 		<addition public="1" set="method" line="36" static="1">
 			<f a="this:b">
@@ -2809,10 +3464,7 @@
 				<x path="Float"/>
 				<x path="fracs.ZeroTo2pi"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":op"><e>A + B</e></m>
-			</meta>
+			<meta><m n=":op"><e>A + B</e></m></meta>
 		</addition>
 		<subtraction public="1" set="method" line="40" static="1">
 			<f a="this:b">
@@ -2820,10 +3472,7 @@
 				<x path="Float"/>
 				<x path="fracs.ZeroTo2pi"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":op"><e>A - B</e></m>
-			</meta>
+			<meta><m n=":op"><e>A - B</e></m></meta>
 		</subtraction>
 		<divide public="1" set="method" line="44" static="1">
 			<f a="this:b">
@@ -2831,10 +3480,7 @@
 				<x path="Float"/>
 				<x path="fracs.ZeroTo2pi"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":op"><e>A / B</e></m>
-			</meta>
+			<meta><m n=":op"><e>A / B</e></m></meta>
 		</divide>
 		<times public="1" set="method" line="48" static="1">
 			<f a="this:b">
@@ -2842,31 +3488,19 @@
 				<x path="Float"/>
 				<x path="fracs.ZeroTo2pi"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":op"><e>A * B</e></m>
-			</meta>
+			<meta><m n=":op"><e>A * B</e></m></meta>
 		</times>
-		<degrees public="1" get="accessor" set="accessor" static="1">
-			<x path="Float"/>
-			<meta><m n=":impl"/></meta>
-		</degrees>
-		<get_degrees public="1" get="inline" set="null" line="52" static="1">
-			<f a="this">
-				<x path="Float"/>
-				<x path="Float"/>
-			</f>
-			<meta><m n=":impl"/></meta>
-		</get_degrees>
-		<set_degrees public="1" get="inline" set="null" line="56" static="1">
-			<f a="this:val">
-				<x path="Float"/>
-				<x path="Float"/>
-				<x path="Float"/>
-			</f>
-			<meta><m n=":impl"/></meta>
-		</set_degrees>
-		<fromFraction get="inline" set="null" line="62" static="1">
+		<degrees public="1" get="accessor" set="accessor" static="1"><x path="Float"/></degrees>
+		<get_degrees public="1" get="inline" set="null" line="53" static="1"><f a="this">
+	<x path="Float"/>
+	<x path="Float"/>
+</f></get_degrees>
+		<set_degrees public="1" get="inline" set="null" line="57" static="1"><f a="this:val">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+</f></set_degrees>
+		<fromFraction get="inline" set="null" line="63" static="1">
 			<f a="val">
 				<x path="fracs.Fraction"/>
 				<x path="fracs.ZeroTo2pi"/>
@@ -2878,27 +3512,21 @@
 				<x path="Float"/>
 				<x path="fracs.Fraction"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":to"/>
-			</meta>
+			<meta><m n=":to"/></meta>
 		</tofraction>
-		<fromString get="inline" set="null" line="71" static="1">
+		<fromString get="inline" set="null" line="72" static="1">
 			<f a="val">
 				<c path="String"/>
 				<x path="fracs.ZeroTo2pi"/>
 			</f>
 			<meta><m n=":from"/></meta>
 		</fromString>
-		<toString public="1" get="inline" set="null" line="77" static="1">
+		<toString public="1" get="inline" set="null" line="78" static="1">
 			<f a="this">
 				<x path="Float"/>
 				<c path="String"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":to"/>
-			</meta>
+			<meta><m n=":to"/></meta>
 		</toString>
 	</class>
 	<abstract path="fracs.ZeroToMinus2pi" params="" file="src/fracs/ZeroToMinus2pi.hx">
@@ -2920,12 +3548,9 @@
 			<x path="Float"/>
 			<x path="fracs.ZeroToMinus2pi"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":noCompletion"/>
-		</meta>
+		<meta><m n=":noCompletion"/></meta>
 	</_new>
-	<fromFloat public="1" get="inline" set="null" line="10" static="1">
+	<fromFloat public="1" get="inline" set="null" line="11" static="1">
 		<f a="f">
 			<x path="Float"/>
 			<x path="fracs.ZeroToMinus2pi"/>
@@ -2938,10 +3563,7 @@
 			<x path="fracs.ZeroToMinus2pi"/>
 			<x path="fracs.ZeroToMinus2pi"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":op"><e>A + B</e></m>
-		</meta>
+		<meta><m n=":op"><e>A + B</e></m></meta>
 	</additionPi>
 	<subtractionPi public="1" set="method" line="24" static="1">
 		<f a="this:b">
@@ -2949,10 +3571,7 @@
 			<x path="fracs.ZeroToMinus2pi"/>
 			<x path="fracs.ZeroToMinus2pi"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":op"><e>A - B</e></m>
-		</meta>
+		<meta><m n=":op"><e>A - B</e></m></meta>
 	</subtractionPi>
 	<dividePi public="1" set="method" line="28" static="1">
 		<f a="this:b">
@@ -2960,10 +3579,7 @@
 			<x path="fracs.ZeroToMinus2pi"/>
 			<x path="fracs.ZeroToMinus2pi"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":op"><e>A / B</e></m>
-		</meta>
+		<meta><m n=":op"><e>A / B</e></m></meta>
 	</dividePi>
 	<timesPi public="1" set="method" line="32" static="1">
 		<f a="this:b">
@@ -2971,10 +3587,7 @@
 			<x path="fracs.ZeroToMinus2pi"/>
 			<x path="fracs.ZeroToMinus2pi"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":op"><e>A * B</e></m>
-		</meta>
+		<meta><m n=":op"><e>A * B</e></m></meta>
 	</timesPi>
 	<addition public="1" set="method" line="36" static="1">
 		<f a="this:b">
@@ -2982,10 +3595,7 @@
 			<x path="Float"/>
 			<x path="fracs.ZeroToMinus2pi"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":op"><e>A + B</e></m>
-		</meta>
+		<meta><m n=":op"><e>A + B</e></m></meta>
 	</addition>
 	<subtraction public="1" set="method" line="40" static="1">
 		<f a="this:b">
@@ -2993,10 +3603,7 @@
 			<x path="Float"/>
 			<x path="fracs.ZeroToMinus2pi"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":op"><e>A - B</e></m>
-		</meta>
+		<meta><m n=":op"><e>A - B</e></m></meta>
 	</subtraction>
 	<divide public="1" set="method" line="44" static="1">
 		<f a="this:b">
@@ -3004,10 +3611,7 @@
 			<x path="Float"/>
 			<x path="fracs.ZeroToMinus2pi"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":op"><e>A / B</e></m>
-		</meta>
+		<meta><m n=":op"><e>A / B</e></m></meta>
 	</divide>
 	<times public="1" set="method" line="48" static="1">
 		<f a="this:b">
@@ -3015,31 +3619,19 @@
 			<x path="Float"/>
 			<x path="fracs.ZeroToMinus2pi"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":op"><e>A * B</e></m>
-		</meta>
+		<meta><m n=":op"><e>A * B</e></m></meta>
 	</times>
-	<degrees public="1" get="accessor" set="accessor" static="1">
-		<x path="Float"/>
-		<meta><m n=":impl"/></meta>
-	</degrees>
-	<get_degrees public="1" get="inline" set="null" line="52" static="1">
-		<f a="this">
-			<x path="Float"/>
-			<x path="Float"/>
-		</f>
-		<meta><m n=":impl"/></meta>
-	</get_degrees>
-	<set_degrees public="1" get="inline" set="null" line="56" static="1">
-		<f a="this:val">
-			<x path="Float"/>
-			<x path="Float"/>
-			<x path="Float"/>
-		</f>
-		<meta><m n=":impl"/></meta>
-	</set_degrees>
-	<fromFraction get="inline" set="null" line="62" static="1">
+	<degrees public="1" get="accessor" set="accessor" static="1"><x path="Float"/></degrees>
+	<get_degrees public="1" get="inline" set="null" line="53" static="1"><f a="this">
+	<x path="Float"/>
+	<x path="Float"/>
+</f></get_degrees>
+	<set_degrees public="1" get="inline" set="null" line="57" static="1"><f a="this:val">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+</f></set_degrees>
+	<fromFraction get="inline" set="null" line="63" static="1">
 		<f a="val">
 			<x path="fracs.Fraction"/>
 			<x path="fracs.ZeroToMinus2pi"/>
@@ -3051,27 +3643,21 @@
 			<x path="Float"/>
 			<x path="fracs.Fraction"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":to"/>
-		</meta>
+		<meta><m n=":to"/></meta>
 	</tofraction>
-	<fromString get="inline" set="null" line="71" static="1">
+	<fromString get="inline" set="null" line="72" static="1">
 		<f a="val">
 			<c path="String"/>
 			<x path="fracs.ZeroToMinus2pi"/>
 		</f>
 		<meta><m n=":from"/></meta>
 	</fromString>
-	<toString public="1" get="inline" set="null" line="77" static="1">
+	<toString public="1" get="inline" set="null" line="78" static="1">
 		<f a="this">
 			<x path="Float"/>
 			<c path="String"/>
 		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":to"/>
-		</meta>
+		<meta><m n=":to"/></meta>
 	</toString>
 </class></impl>
 	</abstract>
@@ -3081,12 +3667,9 @@
 				<x path="Float"/>
 				<x path="fracs.ZeroToMinus2pi"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":noCompletion"/>
-			</meta>
+			<meta><m n=":noCompletion"/></meta>
 		</_new>
-		<fromFloat public="1" get="inline" set="null" line="10" static="1">
+		<fromFloat public="1" get="inline" set="null" line="11" static="1">
 			<f a="f">
 				<x path="Float"/>
 				<x path="fracs.ZeroToMinus2pi"/>
@@ -3099,10 +3682,7 @@
 				<x path="fracs.ZeroToMinus2pi"/>
 				<x path="fracs.ZeroToMinus2pi"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":op"><e>A + B</e></m>
-			</meta>
+			<meta><m n=":op"><e>A + B</e></m></meta>
 		</additionPi>
 		<subtractionPi public="1" set="method" line="24" static="1">
 			<f a="this:b">
@@ -3110,10 +3690,7 @@
 				<x path="fracs.ZeroToMinus2pi"/>
 				<x path="fracs.ZeroToMinus2pi"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":op"><e>A - B</e></m>
-			</meta>
+			<meta><m n=":op"><e>A - B</e></m></meta>
 		</subtractionPi>
 		<dividePi public="1" set="method" line="28" static="1">
 			<f a="this:b">
@@ -3121,10 +3698,7 @@
 				<x path="fracs.ZeroToMinus2pi"/>
 				<x path="fracs.ZeroToMinus2pi"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":op"><e>A / B</e></m>
-			</meta>
+			<meta><m n=":op"><e>A / B</e></m></meta>
 		</dividePi>
 		<timesPi public="1" set="method" line="32" static="1">
 			<f a="this:b">
@@ -3132,10 +3706,7 @@
 				<x path="fracs.ZeroToMinus2pi"/>
 				<x path="fracs.ZeroToMinus2pi"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":op"><e>A * B</e></m>
-			</meta>
+			<meta><m n=":op"><e>A * B</e></m></meta>
 		</timesPi>
 		<addition public="1" set="method" line="36" static="1">
 			<f a="this:b">
@@ -3143,10 +3714,7 @@
 				<x path="Float"/>
 				<x path="fracs.ZeroToMinus2pi"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":op"><e>A + B</e></m>
-			</meta>
+			<meta><m n=":op"><e>A + B</e></m></meta>
 		</addition>
 		<subtraction public="1" set="method" line="40" static="1">
 			<f a="this:b">
@@ -3154,10 +3722,7 @@
 				<x path="Float"/>
 				<x path="fracs.ZeroToMinus2pi"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":op"><e>A - B</e></m>
-			</meta>
+			<meta><m n=":op"><e>A - B</e></m></meta>
 		</subtraction>
 		<divide public="1" set="method" line="44" static="1">
 			<f a="this:b">
@@ -3165,10 +3730,7 @@
 				<x path="Float"/>
 				<x path="fracs.ZeroToMinus2pi"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":op"><e>A / B</e></m>
-			</meta>
+			<meta><m n=":op"><e>A / B</e></m></meta>
 		</divide>
 		<times public="1" set="method" line="48" static="1">
 			<f a="this:b">
@@ -3176,31 +3738,19 @@
 				<x path="Float"/>
 				<x path="fracs.ZeroToMinus2pi"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":op"><e>A * B</e></m>
-			</meta>
+			<meta><m n=":op"><e>A * B</e></m></meta>
 		</times>
-		<degrees public="1" get="accessor" set="accessor" static="1">
-			<x path="Float"/>
-			<meta><m n=":impl"/></meta>
-		</degrees>
-		<get_degrees public="1" get="inline" set="null" line="52" static="1">
-			<f a="this">
-				<x path="Float"/>
-				<x path="Float"/>
-			</f>
-			<meta><m n=":impl"/></meta>
-		</get_degrees>
-		<set_degrees public="1" get="inline" set="null" line="56" static="1">
-			<f a="this:val">
-				<x path="Float"/>
-				<x path="Float"/>
-				<x path="Float"/>
-			</f>
-			<meta><m n=":impl"/></meta>
-		</set_degrees>
-		<fromFraction get="inline" set="null" line="62" static="1">
+		<degrees public="1" get="accessor" set="accessor" static="1"><x path="Float"/></degrees>
+		<get_degrees public="1" get="inline" set="null" line="53" static="1"><f a="this">
+	<x path="Float"/>
+	<x path="Float"/>
+</f></get_degrees>
+		<set_degrees public="1" get="inline" set="null" line="57" static="1"><f a="this:val">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+</f></set_degrees>
+		<fromFraction get="inline" set="null" line="63" static="1">
 			<f a="val">
 				<x path="fracs.Fraction"/>
 				<x path="fracs.ZeroToMinus2pi"/>
@@ -3212,27 +3762,21 @@
 				<x path="Float"/>
 				<x path="fracs.Fraction"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":to"/>
-			</meta>
+			<meta><m n=":to"/></meta>
 		</tofraction>
-		<fromString get="inline" set="null" line="71" static="1">
+		<fromString get="inline" set="null" line="72" static="1">
 			<f a="val">
 				<c path="String"/>
 				<x path="fracs.ZeroToMinus2pi"/>
 			</f>
 			<meta><m n=":from"/></meta>
 		</fromString>
-		<toString public="1" get="inline" set="null" line="77" static="1">
+		<toString public="1" get="inline" set="null" line="78" static="1">
 			<f a="this">
 				<x path="Float"/>
 				<c path="String"/>
 			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":to"/>
-			</meta>
+			<meta><m n=":to"/></meta>
 		</toString>
 	</class>
 	<class path="fracs.upkeep.Doc" params="" file="src/fracs/upkeep/Doc.hx">
@@ -3467,6 +4011,7 @@
 	argument expressions are bound to a local variable.</haxe_doc>
 		<meta>
 			<m n=":forward"/>
+			<m n=":transitive"/>
 			<m n=":semantics"><e>variable</e></m>
 		</meta>
 		<impl><class path="haxe.extern._AsVar.AsVar_Impl_" params="" file="/usr/local/lib/haxe/std/haxe/extern/AsVar.hx" private="1" module="haxe.extern.AsVar" final="1"><meta><m n=":keep"/></meta></class></impl>

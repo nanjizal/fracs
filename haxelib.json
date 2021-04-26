@@ -4,7 +4,7 @@
     "license"      : "MIT",
     "tags"         : ["cross", "fracs","angles","fractions"],
     "description"  : "fracs library with Fraction and Angle abstracts",
-    "version"      : "0.0.1-alpha",
+    "version"      : "0.0.2-alpha",
     "releasenote"  : "See https://github.com/nanjizal/fracs/blob/master/CHANGELOG.md",
     "classPath"    : "src",
     "contributors" : ["Nanjizal"],
