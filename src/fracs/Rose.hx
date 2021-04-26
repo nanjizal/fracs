@@ -45,11 +45,10 @@ enum abstract Rose32( Int ) to Int from Int {
 **/
 @:transitive
 @:forward
-abstract Rose( Rose32 ) from Rose32 to Rose32 {//} to Int from Int {
+abstract Rose( Rose32 ) from Rose32 to Rose32 {
     public inline
     function new( rose: Rose32 ){
         this = rose;
-        //trace( 'this ' + value() );
     }
     @:to
     inline public
@@ -214,5 +213,47 @@ abstract Rose( Rose32 ) from Rose32 to Rose32 {//} to Int from Int {
             case NNW: 'NNW';
             case NbW: 'NbW';
         }
-    } 
+    }
+    inline public
+    function isNorth(){
+        return N == this;
+    }
+    inline public
+    function isWest(){
+        return W == this;
+    }
+    inline public
+    function isEast(){
+        return E == this;
+    }
+    inline public
+    function isSouth(){
+        return S == this;
+    }
+    /**
+     * takes Rose a,b and returns 1 if this is closer to a, -1 if not, 0 if same.
+     */
+    inline public 
+    function closestA( a: Rose, b: Rose ):Int{
+        var na = a.no;
+        var nb = b.no;
+        return if( na == nb ){
+            0;
+        } else {
+            var nthis = no;
+            var da = Math.abs( nthis - na );
+            var db = Math.abs( nthis - nb );
+            if( da > 16 ){
+                da = 32 - da;
+            }
+            if( db > 16 ){
+                db = 32 - da;
+            }
+            if( da == db ){
+                0;
+            } else {
+                ( da < db )? 1: -1;
+            }
+        }
+    }
 }

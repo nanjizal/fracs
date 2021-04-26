@@ -2958,95 +2958,95 @@
 		</f>
 		<meta><m n=":noCompletion"/></meta>
 	</_new>
-	<toInt public="1" get="inline" set="null" line="56" static="1">
+	<toInt public="1" get="inline" set="null" line="55" static="1">
 		<f a="this">
 			<x path="fracs.Rose32"/>
 			<x path="Int"/>
 		</f>
 		<meta><m n=":to"/></meta>
 	</toInt>
-	<fromRadians public="1" get="inline" set="null" line="61" static="1">
+	<fromRadians public="1" get="inline" set="null" line="60" static="1">
 		<f a="f">
 			<x path="Float"/>
 			<x path="fracs.Rose"/>
 		</f>
 		<meta><m n=":from"/></meta>
 	</fromRadians>
-	<compassInt get="inline" set="null" line="65" static="1"><f a="v">
+	<compassInt get="inline" set="null" line="64" static="1"><f a="v">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></compassInt>
-	<from8 get="inline" set="null" line="68" static="1"><f a="v">
+	<from8 get="inline" set="null" line="67" static="1"><f a="v">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></from8>
-	<from16 get="inline" set="null" line="71" static="1"><f a="v">
+	<from16 get="inline" set="null" line="70" static="1"><f a="v">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></from16>
-	<from32 get="inline" set="null" line="75" static="1">
+	<from32 get="inline" set="null" line="74" static="1">
 		<f a="v">
 			<x path="Int"/>
 			<x path="fracs.Rose"/>
 		</f>
 		<meta><m n=":from"/></meta>
 	</from32>
-	<clock90 public="1" get="inline" set="null" line="86" static="1"><f a="this">
+	<clock90 public="1" get="inline" set="null" line="85" static="1"><f a="this">
 	<x path="fracs.Rose32"/>
 	<x path="fracs.Rose"/>
 </f></clock90>
-	<antiClock90 public="1" get="inline" set="null" line="91" static="1"><f a="this">
+	<antiClock90 public="1" get="inline" set="null" line="90" static="1"><f a="this">
 	<x path="fracs.Rose32"/>
 	<x path="fracs.Rose"/>
 </f></antiClock90>
-	<quarterClock90 public="1" get="inline" set="null" line="96" static="1"><f a="this">
+	<quarterClock90 public="1" get="inline" set="null" line="95" static="1"><f a="this">
 	<x path="fracs.Rose32"/>
 	<x path="fracs.Rose"/>
 </f></quarterClock90>
-	<quarterAntiClock90 public="1" get="inline" set="null" line="101" static="1"><f a="this">
+	<quarterAntiClock90 public="1" get="inline" set="null" line="100" static="1"><f a="this">
 	<x path="fracs.Rose32"/>
 	<x path="fracs.Rose"/>
 </f></quarterAntiClock90>
-	<opposite public="1" get="inline" set="null" line="106" static="1"><f a="this">
+	<opposite public="1" get="inline" set="null" line="105" static="1"><f a="this">
 	<x path="fracs.Rose32"/>
 	<x path="fracs.Rose"/>
 </f></opposite>
-	<tofraction get="inline" set="null" line="111" static="1">
+	<tofraction get="inline" set="null" line="110" static="1">
 		<f a="this">
 			<x path="fracs.Rose32"/>
 			<x path="fracs.Fraction"/>
 		</f>
 		<meta><m n=":to"/></meta>
 	</tofraction>
-	<toRadians public="1" get="inline" set="null" line="116" static="1">
+	<toRadians public="1" get="inline" set="null" line="115" static="1">
 		<f a="this">
 			<x path="fracs.Rose32"/>
 			<x path="Float"/>
 		</f>
 		<meta><m n=":to"/></meta>
 	</toRadians>
-	<toPie public="1" get="inline" set="null" line="122" static="1">
+	<toPie public="1" get="inline" set="null" line="121" static="1">
 		<f a="this">
 			<x path="fracs.Rose32"/>
 			<x path="fracs.ZeroTo2pi"/>
 		</f>
 		<meta><m n=":to"/></meta>
 	</toPie>
-	<minus1 public="1" get="inline" set="null" line="127" static="1">
+	<minus1 public="1" get="inline" set="null" line="126" static="1">
 		<f a="this">
 			<x path="fracs.Rose32"/>
 			<x path="fracs.Rose32"/>
 		</f>
 		<meta><m n=":op"><e>A--</e></m></meta>
 	</minus1>
-	<plus1 public="1" get="inline" set="null" line="132" static="1">
+	<plus1 public="1" get="inline" set="null" line="131" static="1">
 		<f a="this">
 			<x path="fracs.Rose32"/>
 			<x path="fracs.Rose32"/>
 		</f>
 		<meta><m n=":op"><e>A++</e></m></meta>
 	</plus1>
-	<adding public="1" get="inline" set="null" line="138" static="1">
+	<adding public="1" get="inline" set="null" line="137" static="1">
 		<f a="a:b">
 			<x path="fracs.Rose"/>
 			<x path="fracs.Rose"/>
@@ -3054,12 +3054,12 @@
 		</f>
 		<meta><m n=":op"><e>A + B</e></m></meta>
 	</adding>
-	<add public="1" get="inline" set="null" line="142" static="1"><f a="this:b">
+	<add public="1" get="inline" set="null" line="141" static="1"><f a="this:b">
 	<x path="fracs.Rose32"/>
 	<x path="fracs.Rose"/>
 	<x path="fracs.Rose"/>
 </f></add>
-	<subtracting public="1" get="inline" set="null" line="147" static="1">
+	<subtracting public="1" get="inline" set="null" line="146" static="1">
 		<f a="a:b">
 			<x path="fracs.Rose"/>
 			<x path="fracs.Rose"/>
@@ -3067,12 +3067,12 @@
 		</f>
 		<meta><m n=":op"><e>A - B</e></m></meta>
 	</subtracting>
-	<subtract public="1" get="inline" set="null" line="151" static="1"><f a="this:b">
+	<subtract public="1" get="inline" set="null" line="150" static="1"><f a="this:b">
 	<x path="fracs.Rose32"/>
 	<x path="fracs.Rose"/>
 	<x path="fracs.Rose"/>
 </f></subtract>
-	<isEqualling public="1" get="inline" set="null" line="156" static="1">
+	<isEqualling public="1" get="inline" set="null" line="155" static="1">
 		<f a="a:b">
 			<x path="fracs.Rose"/>
 			<x path="fracs.Rose"/>
@@ -3080,12 +3080,12 @@
 		</f>
 		<meta><m n=":op"><e>A == B</e></m></meta>
 	</isEqualling>
-	<isEqual public="1" get="inline" set="null" line="159" static="1"><f a="this:b">
+	<isEqual public="1" get="inline" set="null" line="158" static="1"><f a="this:b">
 	<x path="fracs.Rose32"/>
 	<x path="fracs.Rose"/>
 	<x path="Bool"/>
 </f></isEqual>
-	<notEqual public="1" get="inline" set="null" line="163" static="1">
+	<notEqual public="1" get="inline" set="null" line="162" static="1">
 		<f a="a:b">
 			<x path="fracs.Rose"/>
 			<x path="fracs.Rose"/>
@@ -3097,22 +3097,47 @@
 		<x path="Int"/>
 		<haxe_doc>Int getter setter for value</haxe_doc>
 	</no>
-	<get_no get="inline" set="null" line="171" static="1"><f a="this">
+	<get_no get="inline" set="null" line="170" static="1"><f a="this">
 	<x path="fracs.Rose32"/>
 	<x path="Int"/>
 </f></get_no>
-	<set_no get="inline" set="null" line="175" static="1"><f a="this:v">
+	<set_no get="inline" set="null" line="174" static="1"><f a="this:v">
 	<x path="fracs.Rose32"/>
 	<x path="Int"/>
 	<x path="Int"/>
 </f></set_no>
-	<toString public="1" get="inline" set="null" line="181" static="1">
+	<toString public="1" get="inline" set="null" line="180" static="1">
 		<f a="this">
 			<x path="fracs.Rose32"/>
 			<c path="String"/>
 		</f>
 		<meta><m n=":to"/></meta>
 	</toString>
+	<isNorth public="1" get="inline" set="null" line="218" static="1"><f a="this">
+	<x path="fracs.Rose32"/>
+	<x path="Bool"/>
+</f></isNorth>
+	<isWest public="1" get="inline" set="null" line="222" static="1"><f a="this">
+	<x path="fracs.Rose32"/>
+	<x path="Bool"/>
+</f></isWest>
+	<isEast public="1" get="inline" set="null" line="226" static="1"><f a="this">
+	<x path="fracs.Rose32"/>
+	<x path="Bool"/>
+</f></isEast>
+	<isSouth public="1" get="inline" set="null" line="230" static="1"><f a="this">
+	<x path="fracs.Rose32"/>
+	<x path="Bool"/>
+</f></isSouth>
+	<closestA public="1" get="inline" set="null" line="237" static="1">
+		<f a="this:a:b">
+			<x path="fracs.Rose32"/>
+			<x path="fracs.Rose"/>
+			<x path="fracs.Rose"/>
+			<x path="Int"/>
+		</f>
+		<haxe_doc>* takes Rose a,b and returns 1 if this is closer to a, -1 if not, 0 if same.</haxe_doc>
+	</closestA>
 </class></impl>
 	</abstract>
 	<class path="fracs._Rose.Rose_Impl_" params="" file="src/fracs/Rose.hx" private="1" module="fracs.Rose" final="1">
@@ -3123,95 +3148,95 @@
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</_new>
-		<toInt public="1" get="inline" set="null" line="56" static="1">
+		<toInt public="1" get="inline" set="null" line="55" static="1">
 			<f a="this">
 				<x path="fracs.Rose32"/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":to"/></meta>
 		</toInt>
-		<fromRadians public="1" get="inline" set="null" line="61" static="1">
+		<fromRadians public="1" get="inline" set="null" line="60" static="1">
 			<f a="f">
 				<x path="Float"/>
 				<x path="fracs.Rose"/>
 			</f>
 			<meta><m n=":from"/></meta>
 		</fromRadians>
-		<compassInt get="inline" set="null" line="65" static="1"><f a="v">
+		<compassInt get="inline" set="null" line="64" static="1"><f a="v">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></compassInt>
-		<from8 get="inline" set="null" line="68" static="1"><f a="v">
+		<from8 get="inline" set="null" line="67" static="1"><f a="v">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></from8>
-		<from16 get="inline" set="null" line="71" static="1"><f a="v">
+		<from16 get="inline" set="null" line="70" static="1"><f a="v">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></from16>
-		<from32 get="inline" set="null" line="75" static="1">
+		<from32 get="inline" set="null" line="74" static="1">
 			<f a="v">
 				<x path="Int"/>
 				<x path="fracs.Rose"/>
 			</f>
 			<meta><m n=":from"/></meta>
 		</from32>
-		<clock90 public="1" get="inline" set="null" line="86" static="1"><f a="this">
+		<clock90 public="1" get="inline" set="null" line="85" static="1"><f a="this">
 	<x path="fracs.Rose32"/>
 	<x path="fracs.Rose"/>
 </f></clock90>
-		<antiClock90 public="1" get="inline" set="null" line="91" static="1"><f a="this">
+		<antiClock90 public="1" get="inline" set="null" line="90" static="1"><f a="this">
 	<x path="fracs.Rose32"/>
 	<x path="fracs.Rose"/>
 </f></antiClock90>
-		<quarterClock90 public="1" get="inline" set="null" line="96" static="1"><f a="this">
+		<quarterClock90 public="1" get="inline" set="null" line="95" static="1"><f a="this">
 	<x path="fracs.Rose32"/>
 	<x path="fracs.Rose"/>
 </f></quarterClock90>
-		<quarterAntiClock90 public="1" get="inline" set="null" line="101" static="1"><f a="this">
+		<quarterAntiClock90 public="1" get="inline" set="null" line="100" static="1"><f a="this">
 	<x path="fracs.Rose32"/>
 	<x path="fracs.Rose"/>
 </f></quarterAntiClock90>
-		<opposite public="1" get="inline" set="null" line="106" static="1"><f a="this">
+		<opposite public="1" get="inline" set="null" line="105" static="1"><f a="this">
 	<x path="fracs.Rose32"/>
 	<x path="fracs.Rose"/>
 </f></opposite>
-		<tofraction get="inline" set="null" line="111" static="1">
+		<tofraction get="inline" set="null" line="110" static="1">
 			<f a="this">
 				<x path="fracs.Rose32"/>
 				<x path="fracs.Fraction"/>
 			</f>
 			<meta><m n=":to"/></meta>
 		</tofraction>
-		<toRadians public="1" get="inline" set="null" line="116" static="1">
+		<toRadians public="1" get="inline" set="null" line="115" static="1">
 			<f a="this">
 				<x path="fracs.Rose32"/>
 				<x path="Float"/>
 			</f>
 			<meta><m n=":to"/></meta>
 		</toRadians>
-		<toPie public="1" get="inline" set="null" line="122" static="1">
+		<toPie public="1" get="inline" set="null" line="121" static="1">
 			<f a="this">
 				<x path="fracs.Rose32"/>
 				<x path="fracs.ZeroTo2pi"/>
 			</f>
 			<meta><m n=":to"/></meta>
 		</toPie>
-		<minus1 public="1" get="inline" set="null" line="127" static="1">
+		<minus1 public="1" get="inline" set="null" line="126" static="1">
 			<f a="this">
 				<x path="fracs.Rose32"/>
 				<x path="fracs.Rose32"/>
 			</f>
 			<meta><m n=":op"><e>A--</e></m></meta>
 		</minus1>
-		<plus1 public="1" get="inline" set="null" line="132" static="1">
+		<plus1 public="1" get="inline" set="null" line="131" static="1">
 			<f a="this">
 				<x path="fracs.Rose32"/>
 				<x path="fracs.Rose32"/>
 			</f>
 			<meta><m n=":op"><e>A++</e></m></meta>
 		</plus1>
-		<adding public="1" get="inline" set="null" line="138" static="1">
+		<adding public="1" get="inline" set="null" line="137" static="1">
 			<f a="a:b">
 				<x path="fracs.Rose"/>
 				<x path="fracs.Rose"/>
@@ -3219,12 +3244,12 @@
 			</f>
 			<meta><m n=":op"><e>A + B</e></m></meta>
 		</adding>
-		<add public="1" get="inline" set="null" line="142" static="1"><f a="this:b">
+		<add public="1" get="inline" set="null" line="141" static="1"><f a="this:b">
 	<x path="fracs.Rose32"/>
 	<x path="fracs.Rose"/>
 	<x path="fracs.Rose"/>
 </f></add>
-		<subtracting public="1" get="inline" set="null" line="147" static="1">
+		<subtracting public="1" get="inline" set="null" line="146" static="1">
 			<f a="a:b">
 				<x path="fracs.Rose"/>
 				<x path="fracs.Rose"/>
@@ -3232,12 +3257,12 @@
 			</f>
 			<meta><m n=":op"><e>A - B</e></m></meta>
 		</subtracting>
-		<subtract public="1" get="inline" set="null" line="151" static="1"><f a="this:b">
+		<subtract public="1" get="inline" set="null" line="150" static="1"><f a="this:b">
 	<x path="fracs.Rose32"/>
 	<x path="fracs.Rose"/>
 	<x path="fracs.Rose"/>
 </f></subtract>
-		<isEqualling public="1" get="inline" set="null" line="156" static="1">
+		<isEqualling public="1" get="inline" set="null" line="155" static="1">
 			<f a="a:b">
 				<x path="fracs.Rose"/>
 				<x path="fracs.Rose"/>
@@ -3245,12 +3270,12 @@
 			</f>
 			<meta><m n=":op"><e>A == B</e></m></meta>
 		</isEqualling>
-		<isEqual public="1" get="inline" set="null" line="159" static="1"><f a="this:b">
+		<isEqual public="1" get="inline" set="null" line="158" static="1"><f a="this:b">
 	<x path="fracs.Rose32"/>
 	<x path="fracs.Rose"/>
 	<x path="Bool"/>
 </f></isEqual>
-		<notEqual public="1" get="inline" set="null" line="163" static="1">
+		<notEqual public="1" get="inline" set="null" line="162" static="1">
 			<f a="a:b">
 				<x path="fracs.Rose"/>
 				<x path="fracs.Rose"/>
@@ -3262,22 +3287,47 @@
 			<x path="Int"/>
 			<haxe_doc>Int getter setter for value</haxe_doc>
 		</no>
-		<get_no get="inline" set="null" line="171" static="1"><f a="this">
+		<get_no get="inline" set="null" line="170" static="1"><f a="this">
 	<x path="fracs.Rose32"/>
 	<x path="Int"/>
 </f></get_no>
-		<set_no get="inline" set="null" line="175" static="1"><f a="this:v">
+		<set_no get="inline" set="null" line="174" static="1"><f a="this:v">
 	<x path="fracs.Rose32"/>
 	<x path="Int"/>
 	<x path="Int"/>
 </f></set_no>
-		<toString public="1" get="inline" set="null" line="181" static="1">
+		<toString public="1" get="inline" set="null" line="180" static="1">
 			<f a="this">
 				<x path="fracs.Rose32"/>
 				<c path="String"/>
 			</f>
 			<meta><m n=":to"/></meta>
 		</toString>
+		<isNorth public="1" get="inline" set="null" line="218" static="1"><f a="this">
+	<x path="fracs.Rose32"/>
+	<x path="Bool"/>
+</f></isNorth>
+		<isWest public="1" get="inline" set="null" line="222" static="1"><f a="this">
+	<x path="fracs.Rose32"/>
+	<x path="Bool"/>
+</f></isWest>
+		<isEast public="1" get="inline" set="null" line="226" static="1"><f a="this">
+	<x path="fracs.Rose32"/>
+	<x path="Bool"/>
+</f></isEast>
+		<isSouth public="1" get="inline" set="null" line="230" static="1"><f a="this">
+	<x path="fracs.Rose32"/>
+	<x path="Bool"/>
+</f></isSouth>
+		<closestA public="1" get="inline" set="null" line="237" static="1">
+			<f a="this:a:b">
+				<x path="fracs.Rose32"/>
+				<x path="fracs.Rose"/>
+				<x path="fracs.Rose"/>
+				<x path="Int"/>
+			</f>
+			<haxe_doc>* takes Rose a,b and returns 1 if this is closer to a, -1 if not, 0 if same.</haxe_doc>
+		</closestA>
 	</class>
 	<abstract path="fracs.ZeroTo2pi" params="" file="src/fracs/ZeroTo2pi.hx">
 		<from>

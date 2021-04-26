@@ -73,6 +73,15 @@ class Test {
         trace( east );
         var rads: Float = east;
         trace( rads );
-        
+        var north: Rose = N;
+        var nearEast: Rose = NEbN;
+        var justAboveNorth: Rose = NbW;
+        var A = justAboveNorth;
+        var nearA = north.closestA( A, nearEast );
+        trace( 'near north - ' + ( nearA == 1 ) );
+        var east: Rose = E;
+        var notNearEast = east.closestA( A, nearEast );
+        trace( 'not near east - ' + ( notNearEast == 1 ) );
+        trace( 'isNorth north ' + north.isNorth() );
     }
 }

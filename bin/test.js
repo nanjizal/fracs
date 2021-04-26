@@ -569,7 +569,7 @@ Test.main = function() {
 			break;
 		}
 	}
-	console.log("src/Test.hx:54:","north " + tmp);
+	console.log("src/Test.hx:53:","north " + tmp);
 	var tmp;
 	if(east == null) {
 		tmp = "null";
@@ -674,7 +674,7 @@ Test.main = function() {
 			break;
 		}
 	}
-	console.log("src/Test.hx:55:","east " + tmp);
+	console.log("src/Test.hx:54:","east " + tmp);
 	var v = north - east;
 	if(v < 0) {
 		var a = v % 32;
@@ -790,7 +790,7 @@ Test.main = function() {
 			break;
 		}
 	}
-	console.log("src/Test.hx:57:","west " + tmp);
+	console.log("src/Test.hx:56:","west " + tmp);
 	var v = east + east;
 	if(v < 0) {
 		var a = v % 32;
@@ -906,7 +906,7 @@ Test.main = function() {
 			break;
 		}
 	}
-	console.log("src/Test.hx:59:","east3 " + tmp);
+	console.log("src/Test.hx:58:","east3 " + tmp);
 	var v = east3 + east;
 	if(v < 0) {
 		var a = v % 32;
@@ -1022,7 +1022,7 @@ Test.main = function() {
 			break;
 		}
 	}
-	console.log("src/Test.hx:61:","east4 " + tmp);
+	console.log("src/Test.hx:60:","east4 " + tmp);
 	var v = east4 + east;
 	if(v < 0) {
 		var a = v % 32;
@@ -1157,7 +1157,7 @@ Test.main = function() {
 			break;
 		}
 	}
-	console.log("src/Test.hx:63:","east5 " + tmp);
+	console.log("src/Test.hx:62:","east5 " + tmp);
 	var _ = north;
 	var v = _ + 1;
 	if(v < 0) {
@@ -1273,7 +1273,7 @@ Test.main = function() {
 			break;
 		}
 	}
-	console.log("src/Test.hx:65:","north " + tmp);
+	console.log("src/Test.hx:64:","north " + tmp);
 	var f = north / 32;
 	var arr = fracs_Fracs.approximateFractions(f);
 	var dist = Infinity;
@@ -1304,9 +1304,9 @@ Test.main = function() {
 		var out = n == 0 ? "0" : n == d ? "1" : d == 1 ? frac.positive ? "" + n : "-" + n : frac.positive ? "" + n + "/" + d : "-" + n + "/" + d;
 		tmp = out;
 	}
-	console.log("src/Test.hx:67:","fraction " + tmp);
+	console.log("src/Test.hx:66:","fraction " + tmp);
 	var rose4 = 8;
-	console.log("src/Test.hx:69:",rose4 == east);
+	console.log("src/Test.hx:68:",rose4 == east);
 	var east = 8;
 	var tmp;
 	if(east == null) {
@@ -1412,8 +1412,8 @@ Test.main = function() {
 			break;
 		}
 	}
-	console.log("src/Test.hx:71:","east " + tmp);
-	console.log("src/Test.hx:72:",east);
+	console.log("src/Test.hx:70:","east " + tmp);
+	console.log("src/Test.hx:71:",east);
 	var v = 16;
 	if(v < 0) {
 		var a = v % 32;
@@ -1528,10 +1528,52 @@ Test.main = function() {
 			break;
 		}
 	}
-	console.log("src/Test.hx:74:",tmp);
+	console.log("src/Test.hx:73:",tmp);
 	var v = east / 16 * Math.PI;
 	var rads = v;
-	console.log("src/Test.hx:76:",rads);
+	console.log("src/Test.hx:75:",rads);
+	var north = 0;
+	var nearEast = 3;
+	var justAboveNorth = 31;
+	var A = justAboveNorth;
+	var na = A;
+	var nb = nearEast;
+	var nearA;
+	if(na == nb) {
+		nearA = 0;
+	} else {
+		var nthis = north;
+		var da = Math.abs(nthis - na);
+		var db = Math.abs(nthis - nb);
+		if(da > 16) {
+			da = 32 - da;
+		}
+		if(db > 16) {
+			db = 32 - da;
+		}
+		nearA = da == db ? 0 : da < db ? 1 : -1;
+	}
+	console.log("src/Test.hx:81:","near north - " + Std.string(nearA == 1));
+	var east = 8;
+	var na = A;
+	var nb = nearEast;
+	var notNearEast;
+	if(na == nb) {
+		notNearEast = 0;
+	} else {
+		var nthis = east;
+		var da = Math.abs(nthis - na);
+		var db = Math.abs(nthis - nb);
+		if(da > 16) {
+			da = 32 - da;
+		}
+		if(db > 16) {
+			db = 32 - da;
+		}
+		notNearEast = da == db ? 0 : da < db ? 1 : -1;
+	}
+	console.log("src/Test.hx:84:","not near east - " + Std.string(notNearEast == 1));
+	console.log("src/Test.hx:85:","isNorth north " + Std.string(0 == north));
 };
 var fracs_Fracs = function() { };
 fracs_Fracs.__name__ = true;
