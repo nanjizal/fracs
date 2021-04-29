@@ -59,7 +59,7 @@ abstract Rose( Rose32 ) from Rose32 to Rose32 {
     static inline public 
     function fromRadians( f: Float ) {
         var z2p = Angles.zeroto2pi( f );
-        return from32( Math.round( z2p*32 ) );
+        return from32( Math.round( z2p*( 16 / Math.PI ) ) );
     }
     inline static function compassInt( v: Int ){
         from32( Std.int( v*8 ) );
