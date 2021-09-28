@@ -6,6 +6,7 @@ enum DifferencePreference {
     ANTICLOCKWISE;
     SMALL;
     LARGE;
+    SMALL_OLD;
 }
 class Angles{
     public inline static function pi2pi( angle: Float ): Float {
@@ -43,6 +44,8 @@ class Angles{
                 differenceSmall( a, b );
             case LARGE:
                 differenceLarge( a, b );
+            case SMALL_OLD:
+                differenceSmall_old( a, b );
         }
     }  
     public inline static function difference( a: Float, b: Float ): Float {
@@ -70,6 +73,21 @@ class Angles{
         var theta = Math.abs( fa - fb );
         var smallest = ( theta <= Math.PI ); // smallest or equal!
         var clockwise = fa < fb;
+        var dif = ( clockwise )? theta: -theta;
+        return if( smallest ) {
+            dif;
+        } else {
+            ( clockwise )? -( 2 * Math.PI - theta ): 2 * Math.PI - theta;
+        }
+    }
+    public inline static function differenceSmall_old( a: Float, b: Float ): Float {
+        var za: ZeroTo2pi = a;
+        var zb: ZeroTo2pi = b;
+        var fa: Float = a;
+        var fb: Float = b;
+        var theta = Math.abs( a - b );
+        var smallest = ( theta <= Math.PI ); // smallest or equal!
+        var clockwise = a < b;
         var dif = ( clockwise )? theta: -theta;
         return if( smallest ) {
             dif;
