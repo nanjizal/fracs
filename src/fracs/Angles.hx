@@ -8,6 +8,7 @@ enum DifferencePreference {
     LARGE;
     SMALL_OLD;
 }
+// SMALL_OLD is required by cornerContour to draw end caps on lines correctly, not ideal but works.
 class Angles{
     public inline static function pi2pi( angle: Float ): Float {
         return if( angle <= Math.PI && angle > -Math.PI ){
