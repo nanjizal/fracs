@@ -26,4 +26,4 @@ Should be easy to implement from commited code. )
 
 Now also provides a compass Rose so you can more easily work with named compass angles.
 
-[0.0.2-alpha](https://github.com/nanjizal/fracs/releases/tag/0.0.2-alpha) pre-release
+[0.0.3-alpha](https://github.com/nanjizal/fracs/releases/tag/0.0.3-alpha) pre-release
