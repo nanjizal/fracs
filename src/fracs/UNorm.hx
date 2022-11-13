@@ -1,3 +1,4 @@
+package fracs;
 /**
   UNorm limits values between 0 -> 1
   untested
