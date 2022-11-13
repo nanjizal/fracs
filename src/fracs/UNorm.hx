@@ -2,6 +2,7 @@
   UNorm limits values between 0 -> 1
   untested
 **/
+
 @:transitive
 abstract UNorm( Float ) from Float to Float {
     public inline function new( no: Float ){
