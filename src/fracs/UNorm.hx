@@ -1,10 +1,12 @@
 /**
-	UNorm limits values between 0 -> 1
+  UNorm limits values between 0 -> 1
   untested
 **/
 @:transitive
 abstract UNorm( Float ) from Float to Float {
-  //
+    public inline function new( no: Float ){
+        this = clamp( no );
+    }
 	@:op(-A) private inline function negate():Float
 		return ( ~this: Float );
 
@@ -14,7 +16,7 @@ abstract UNorm( Float ) from Float to Float {
 	@:op(A + B) @:commutative private static inline function addFloat(a:UNorm, b:Float):UNorm
 		return clamp((a : UNorm) + (b : Float));
 
-  @:op(A + B) @:commutative private static inline function addInt(a:UNorm, b:Int):UNorm
+	@:op(A + B) @:commutative private static inline function addInt(a:UNorm, b:Int):UNorm
 		return clamp((a : UNorm) + (b : Int));
 
 	@:op(A - B) private static inline function sub(a:UNorm, b:UNorm):UNorm
@@ -26,7 +28,7 @@ abstract UNorm( Float ) from Float to Float {
 	@:op(A - B) private static inline function floatSub(a:Float, b:UNorm):UNorm
 		return clamp((a : Float) - (b : Float));
 
-  @:op(A - B) private static inline function subInt(a:UNorm, b:Int):UNorm
+	@:op(A - B) private static inline function subInt(a:UNorm, b:Int):UNorm
 		return clamp((a : Float) - (b : Int));
 
 	@:op(A - B) private static inline function intSub(a:Int, b:UNorm):UNorm
@@ -36,13 +38,13 @@ abstract UNorm( Float ) from Float to Float {
 		return return clamp((a : Float) * (b : Float));
   
 	@:op(A * B) private static function mul(a:UNorm, b:UNorm):Unorm
-    return return clamp((a : Float) * (b : Float));
+		return return clamp((a : Float) * (b : Float));
 
 	@:op(A * B) @:commutative private static function mulInt(a:Float, b:Int):UNorm
-    return return clamp((a : Float) * (b : Int));
+		return return clamp((a : Float) * (b : Int));
 
 	@:op(A / B) private static function div(a:UNorm, b:Unorm:Float
-    return return clamp((a : Float) / (b : Float));                                       
+		return return clamp((a : Float) / (b : Float));                                       
 
 	@:op(A / B) private static function divFloat(a:UNorm, b:Float):UNorm
     return return clamp((a : Float) / (b : Float)); 
@@ -51,10 +53,10 @@ abstract UNorm( Float ) from Float to Float {
     return return clamp((a : Float) / (b : Float)); 
 
 	@:op(A / B) private static function divInt(a:UNorm, b:Int):UNorm
-    return return clamp((a : Float) / (b : Int)); 
+        return return clamp((a : Float) / (b : Int)); 
 
 	@:op(A / B) private static function intDiv(a:Int, b:UNorm):UNorm
-    return return clamp((a : Int) / (b : Float)); 
+        return return clamp((a : Int) / (b : Float)); 
   // mod ommitted
 
 	@:op(A == B) private static function eq(a:UNorm, b:UNorm):Bool;
@@ -113,13 +115,13 @@ abstract UNorm( Float ) from Float to Float {
 		return this;
   
 	static function clamp( x: Float ): UNorm {
-    it( x < 0. ){
-      ( 0.: UNorm );
-    } else if( x > 1. ){
-      ( 1.: UNorm );
-    } else {
-      x;
-    }
+        return  if( x < 0. ){
+                    ( 0.: UNorm );
+                } else if( x > 1. ){
+                    ( 1.: UNorm );
+                } else {
+                    ( x: UNorm );
+                }
 	}
   
 }
