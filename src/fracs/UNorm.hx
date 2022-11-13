@@ -8,8 +8,8 @@ abstract UNorm( Float ) from Float to Float {
     public inline function new( no: Float ){
         this = clamp( no );
     }
-	@:op(-A) private inline function negate():Float
-		return ( ~this: Float );
+    @:op(-A) private inline function negate():Float
+	    return ( ~this: Float );
 
 	@:op(A + B) private static inline function add(a:UNorm, b:UNorm):UNorm
 		return clamp((a : Float) + (b : Float));
@@ -48,10 +48,10 @@ abstract UNorm( Float ) from Float to Float {
 		return return clamp((a : Float) / (b : Float));                                       
 
 	@:op(A / B) private static function divFloat(a:UNorm, b:Float):UNorm
-    return return clamp((a : Float) / (b : Float)); 
+        return return clamp((a : Float) / (b : Float)); 
 
 	@:op(A / B) private static function FloatDiv(a:Float, b:UNorm):UNorm
-    return return clamp((a : Float) / (b : Float)); 
+        return return clamp((a : Float) / (b : Float)); 
 
 	@:op(A / B) private static function divInt(a:UNorm, b:Int):UNorm
         return return clamp((a : Float) / (b : Int)); 
