@@ -1,5 +1,4 @@
 package fracs;
-package doudecimal;
 /**
   UNorm limits values between 0 -> 1
   untested
